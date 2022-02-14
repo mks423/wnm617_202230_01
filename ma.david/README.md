@@ -4,5 +4,5 @@
 
 ## Important Links
 
-- https://makyungseok.com
+- https://makyungseok.com/portfolio/
 - https://makyungseok.com/aau/wnm617/ma.david
