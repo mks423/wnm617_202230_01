@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIANTSTEP</title>
+    <base href="/aau/wnm617/ma.david/">
+    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+    <link rel="stylesheet" href="lib/css/app.css">
+    <link rel="stylesheet" href="lib/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="lib/js/jquery-2.2.4.min.js"></script>
+    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/js/app.js"></script>
+</head>
+<body>
+
+
+    <section data-role="page" id="initial-page">
+        <div data-role="main">
+            <div class="logo-section">
+                <h1>GIANTSTEP</h1>
+            </div>
+            <div class="welcome-section">
+                <h2>Welcome</h2>
+            </div>
+            <form id="signin-form" class="form text-align-center">
+                <div class="form-control">
+                    <a href="#username-page" class="form-button">Sign In</a>
+                </div>
+                <div class="register-section">
+                    <p>Don't have an ID? <a href="#signup-page" class="underline">Create yours now</a></p>
+                </div>
+            </form>
+    </section>
+
+    <section data-role="page" id="username-page">
+        <header data-role="header">
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+            </ul>
+        </header>
+        <div data-role="main">
+            <div class="signin-guide-section">
+            <h1>Sign in</h1>
+            <p>Use your account</p>
+            </div>
+            <form id="signin-form" class="form">
+            <div class="form-control">
+                <label for="sigin-username" class="form-label">Username</label>
+                <input type="text" id="signin-username" class="form-input" placeholder="Enter your Username">
+            </div>
+            <div class="continue-btn">
+                <a href="#password-page" class="form-button">Continue</a>
+            </div>
+            </form>
+        </div>
+    </section>
+
+    <section data-role="page" id="password-page">
+        <header data-role="header">
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+            </ul>
+        </header>
+        <div data-role="main">
+            <div class="signin-guide-section">
+                <h2>Hi Henry</h2>
+                <p>Henry10@giantstep.com</p>
+            </div>
+            <form id="signin-form" class="form">
+                <div class="form-control">
+                    <label for="sigin-password" class="form-label">Password</label>
+                    <input type="password" id="signin-password" class="form-input" placeholder="Enter your Password">
+                </div>
+            <div class="continue-btn">
+                <a href="#home-page" class="form-button">Continue</a>
+            </div>
+            </form>
+        </div>
+    </section>
+
+    <section data-role="page" id="signup-page">
+        <header data-role="header">
+            <h1>Signup</h1>
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+                <li class="flex-stretch"></li>
+                <!-- <li><a href="#profile-page">Signup</a></li> -->
+
+            </ul>
+        </header>
+        <div data-role="main" class="signup">
+            <form id="signup" class="form">
+                <div class="form-control">
+                    <label for="signup-name" class="form-label">Name</label>
+                    <input type="text" id="signin-username" class="form-input" placeholder="Name">
+                </div>
+                <div class="form-control">
+                    <label for="signup-username" class="form-label">Userame</label>
+                    <input type="text" id="signin-username" class="form-input" placeholder="Username">
+                </div>
+                <div class="form-control">
+                    <label for="signup-password" class="form-label">Password</label>
+                    <input type="text" id="signin-username" class="form-input" placeholder="Password">
+                </div>
+                <div class="signin-btn">
+                    <a href="#home-page" class="form-button">Sign Up</a>
+                </div>
+                        
+                </form>
+        </div>
+    </section>
+
+    <section data-role="page" id="home-page">
+        <header data-role="header">
+            <h1>GIANTSTEP</h1>
+        </header>
+        <div data-role="main">
+            <div class="greeting-section">
+                <h1>Good Morning,<br>Henry</h1>
+            </div>
+            <div class="title-section flex-center">
+                <h2 class="title-mypath">My Path</h2>
+                <a href="#addpath-page">Add</a>
+            </div>
+            <div class="pathlist-section">
+                <div class="listbox listbox1"><a href="#step1-page">Piano practice</a></div>
+                <div class="listbox listbox2"><a href="#step2-page">Workout</a></div>
+                <div class="listbox listbox3"><a href="#step3-page">Reading</a></div>
+                <div class="listbox listbox4"><a href="#step4-page">Lettering Design</a></div>
+            </div>
+        </div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#home-page">HOME</a></li>
+                <li><a href="#step-page">STEP</a></li>
+                <li><a href="#analysis-page">ANALYSIS</a></li>
+                <li><a href="#profile-page">PROFILE</a></li>
+            </ul>
+        </footer>
+    </section>
+
+    <section data-role="page" id="addpath-page">
+        <header data-role="header">
+            <h1>Add Path</h1>
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+                <li class="flex-stretch"></li>
+                <li><a href="#home-page">Add</a></li>
+            </ul>
+        </header>
+        <div data-role="main">
+            <form id="addpath-form" class="form">
+                <div class="form-control">
+                    <label for="add-path" class="form-label">Path name</label>
+                    <input type="type" id="add-path" class="form-input" placeholder="Path Name">
+                </div>
+                <div class="form-control">
+                    <label for="add-label" class="form-label">Label Name</label>
+                    <input type="type" id="add-path" class="form-input" placeholder="Add a Label">
+                </div>
+                <div class="form-control">
+                    <label for="add-description" class="form-label">Description</label>
+                    <input type="type" id="add-path" class="form-input" placeholder="Add a Description">
+                </div>
+                </form>
+        </div>
+    </section>
+
+    <section data-role="page" id="step-page">
+        <header data-role="header">
+            <h1>My Steps</h1>
+            <ul>
+                <!-- <li><a href="#" data-rel="back">Back</a></li> -->
+                <li class="flex-stretch"></li>
+                <li><a href="#addstep-page">Add</a></li>
+            </ul>
+        </header>
+        <div data-role="main" class="mysteps">
+                <div class="feed-section">
+                    <div class="feed-title flex-center">
+                        <h1><a href="#step1-page">Piano Practice</a></h1>
+                        <p>STEP #12</p>
+                        <li><a href="#editstep-page">Edit</a></li>
+                    </div>
+                    <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                    <div class="property-section"></div>
+                        <h3>Duration</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h3>Improvement</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h3>feedback</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                    </div>
+                    <div class="feed-section">
+                        <div class="feed-title flex-center">
+                            <h1><a href="#step4-page">Lettering Design</a></h1>
+                            <p>STEP #5</p>
+                            <li><a href="#editstep-page">Edit</a></li>
+                        </div>
+                        <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                        <div class="property-section"></div>
+                            <h3>Duration</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>Improvement</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>feedback</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                        </div>
+                        <div class="feed-section">
+                            <div class="feed-title flex-center">
+                                <h1><a href="#step3-page">Reading</a></h1>
+                                <p>STEP #3</p>
+                                <li><a href="#editstep-page">Edit</a></li>
+                            </div>
+                            <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                            <div class="property-section"></div>
+                                <h3>Duration</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <h3>Improvement</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <h3>feedback</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                            </div>
+        </div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#home-page">HOME</a></li>
+                <li><a href="#step-page">STEP</a></li>
+                <li><a href="#analysis-page">ANALYSIS</a></li>
+                <li><a href="#profile-page">PROFILE</a></li>
+            </ul>
+        </footer>
+    </section>
+
+    <section data-role="page" id="editstep-page">
+        <header data-role="header">
+            <h1>Edit Step</h1>
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+                <li class="flex-stretch"></li>
+                <li><a href="#step-page">Edit</a></li>
+            </ul>
+        </header>
+        <div data-role="main">
+            <form id="editpath-form" class="form">
+                <div class="form-control">
+                    <label for="edit-path" class="form-label">Path Category</label>
+                    <input type="type" id="edit-path" class="form-input" placeholder="Path Category">
+                </div>
+                <div class="form-control">
+                    <label for="edit-step" class="form-label">Step name</label>
+                    <input type="type" id="edit-step" class="form-input" placeholder="Edit Step">
+                </div>
+                <div class="form-control">
+                    <label for="edit-duration" class="form-label">Duration</label>
+                    <input type="type" id="edit-duration" class="form-input" placeholder="Edit Duration">
+                </div>
+                <div class="form-control">
+                    <label for="edit-description" class="form-label">Description</label>
+                    <input type="type" id="edit-description" class="form-input" placeholder="Edit Description">
+                </div>
+                </form>
+        </div>
+    </section>
+
+    <section data-role="page" id="addstep-page">
+        <header data-role="header">
+            <h1>Edit Step</h1>
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+                <li class="flex-stretch"></li>
+                <li><a href="#step-page">Add</a></li>
+            </ul>
+        </header>
+        <div data-role="main">
+            <form id="addstep-form" class="form">
+                <div class="form-control">
+                    <label for="add-path" class="form-label">Path Category</label>
+                    <input type="type" id="edit-path" class="form-input" placeholder="Path Category">
+                </div>
+                <div class="form-control">
+                    <label for="add-step" class="form-label">Step name</label>
+                    <input type="type" id="edit-step" class="form-input" placeholder="Step Name">
+                </div>
+                <div class="form-control">
+                    <label for="add-duration" class="form-label">Duration</label>
+                    <input type="type" id="edit-duration" class="form-input" placeholder="Duration">
+                </div>
+                <div class="form-control">
+                    <label for="add-description" class="form-label">Description</label>
+                    <input type="type" id="edit-description" class="form-input" placeholder="Description">
+                </div>
+                </form>
+        </div>
+    </section>
+
+    <section data-role="page" id="analysis-page">
+        <header data-role="header">
+            <h1>Analysis</h1>
+            <ul>
+                <li class="flex-stretch"></li>
+            </ul>
+        </header>
+        <div data-role="main" class="analysis">
+            <div class="title-line flex-center">
+            <h2 class="title-mypath">Steps</h2>
+            <!-- <li><a href="#">Add</a></li> -->
+            </div>
+            <div class="analysis1-wrapper">
+                <div class="path1">
+                <p><a href="#step1-page">Piano Practice</a></p>
+                <div class="step-bar1"></div>
+                </div>
+                <div class="path2">
+                <p><a href="#step2-page">Workout</a></p>
+                <div class="step-bar2"></div>
+                </div>
+                <div class="path3">
+                <p><a href="#step3-page">Reading</a></p>
+                <div class="step-bar3"></div>
+                </div>
+                <div class="path4">
+                <p><a href="#step4-page">Lettering Design</a></p>
+                <div class="step-bar4"></div>
+                </div>
+            </div>
+            <div class="title-line flex-center">
+                <h2 class="title-mypath">Duration</h2>
+                <!-- <li><a href="#">Add</a></li> -->
+                </div>
+            <div class="analysis1-wrapper">
+                <div class="path1">
+                <p><a href="#step1-page">Piano Practice</a></p>
+                <div class="step-bar1"></div>
+                </div>
+                <div class="path2">
+                <p><a href="#step2-page">Workout</a></p>
+                <div class="step-bar2"></div>
+                </div>
+                <div class="path3">
+                <p><a href="#step3-page">Reading</a></p>
+                <div class="step-bar3"></div>
+                </div>
+                <div class="path4">
+                <p><a href="#step4-page">Lettering Design</a></p>
+                <div class="step-bar4"></div>
+                </div>
+            </div>
+            <div class="title-line flex-center">
+                <h2 class="title-mypath">Improvement</h2>
+                <!-- <li><a href="#">Add</a></li> -->
+                </div>
+                <div class="analysis1-wrapper">
+                    <div class="path1">
+                    <p><a href="#step1-page">Piano Practice</a></p>
+                    <div class="step-bar1"></div>
+                    </div>
+                    <div class="path2">
+                    <p><a href="#step2-page">Workout</a></p>
+                    <div class="step-bar2"></div>
+                    </div>
+                    <div class="path3">
+                    <p><a href="#step3-page">Reading</a></p>
+                    <div class="step-bar3"></div>
+                    </div>
+                    <div class="path4">
+                    <p><a href="#step4-page">Lettering Design</a></p>
+                    <div class="step-bar4"></div>
+                    </div>
+                </div>
+        </div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#home-page">HOME</a></li>
+                <li><a href="#step-page">STEP</a></li>
+                <li><a href="#analysis-page">ANALYSIS</a></li>
+                <li><a href="#profile-page">PROFILE</a></li>
+            </ul>
+        </footer>
+    </section>
+
+    <section data-role="page" id="profile-page">
+        <header data-role="header">
+            <h1>Profile</h1>
+            <ul>
+                <li><a href="#initial-page">Logout</a></li>
+                <li class="flex-stretch"></li>
+                <li><a href="#edit-profile-page">Edit</a></li>
+            </ul>
+        </header>
+        <div data-role="main" class="profile">
+            <div class="title-line flex-center">
+            <h2 class="username">Henry</h2>
+            <!-- <li><a href="#">Add</a></li> -->
+            </div>
+            <div class="flex-center profile-inform-section">
+                <div>
+                <h2>Path</h2>
+                <p>4</p>
+                </div>
+                <div>
+                <h2>Step</h2>
+                <p>42</p>
+                </div>  
+                <div>
+                <h2>Time</h2>
+                <p>54</p>
+                </div>
+            </div>
+            <h2>Username</h2>
+            <p>henry10</p>
+            <h2>Website</h2>
+            <p>henry10.com</p>
+            <h2>Email</h2>
+            <p>henry10@giantstep.com</p>
+            <h2>Phone Number</h2>
+            <p>-</p>
+        </div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#home-page">HOME</a></li>
+                <li><a href="#step-page">STEP</a></li>
+                <li><a href="#analysis-page">ANALYSIS</a></li>
+                <li><a href="#profile-page">PROFILE</a></li>
+            </ul>
+        </footer>
+    </section>
+
+    <section data-role="page" id="edit-profile-page">
+        <header data-role="header">
+            <h1>Edit Profile</h1>
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+                <li class="flex-stretch"></li>
+                <li><a href="#profile-page">Done</a></li>
+
+            </ul>
+        </header>
+        <div data-role="main" class="edit-profile">
+            <div class="title-line flex-center">
+            <h2 class="username">Henry</h2>
+            <!-- <li><a href="#">Add</a></li> -->
+            </div>
+            <div class="flex-center profile-inform-section">
+                <div>
+                <h2>Path</h2>
+                <p>4</p>
+                </div>
+                <div>
+                <h2>Step</h2>
+                <p>42</p>
+                </div>  
+                <div>
+                <h2>Time</h2>
+                <p>54</p>
+                </div>
+            </div>
+            <form id="edit-user-profile" class="form">
+                <div class="form-control">
+                    <label for="edit-username" class="form-label">Username</label>
+                    <input type="text" id="signin-username" class="form-input" placeholder="henry10">
+                </div>
+                <div class="form-control">
+                    <label for="edit-website" class="form-label">Website</label>
+                    <input type="text" id="signin-username" class="form-input" placeholder="henry10.com">
+                </div>
+                <div class="form-control">
+                    <label for="edit-bio" class="form-label">Bio</label>
+                    <input type="text" id="signin-username" class="form-input">
+                </div>
+                <div class="form-control">
+                    <label for="edit-email" class="form-label">Email</label>
+                    <input type="text" id="signin-username" class="form-input" placeholder="henry10@giantstep.com">
+                </div>
+                <div class="form-control">
+                    <label for="edit-phonenumber" class="form-label">Phone Number</label>
+                    <input type="text" id="signin-username" class="form-input" placeholder="Phone Number">
+                </div>             
+                </form>
+        </div>
+    </section>
+
+
+    <section data-role="page" id="step1-page">
+        <header data-role="header">
+            <h1>Piano Practice</h1>
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+                <li class="flex-stretch"></li>
+                <li><a href="#addstep-page">Add</a></li>
+            </ul>
+        </header>
+        <div class="flex-evenly step-inform-section">
+            <div>
+            <h2>Step</h2>
+            <p>12</p>
+            </div>  
+            <div>
+            <h2>Time</h2>
+            <p>15</p>
+            </div>      
+        </div>
+        <div data-role="main" class="mysteps">
+                <div class="feed-section">
+                    <div class="feed-title flex-center">
+                        <p>STEP #12</p>
+                        <li><a href="#editstep-page">Edit</a></li>
+                    </div>
+                    <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                    <div class="property-section"></div>
+                        <h3>Duration</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h3>Improvement</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h3>feedback</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                    </div>
+                    <div class="feed-section">
+                        <div class="feed-title flex-center">
+                            <p>STEP #11</p>
+                            <li><a href="#editstep-page">Edit</a></li>
+                        </div>
+                        <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                        <div class="property-section"></div>
+                            <h3>Duration</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>Improvement</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>feedback</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                        </div>
+                        <div class="feed-section">
+                            <div class="feed-title flex-center">
+                                <p>STEP #10</p>
+                                <li><a href="#editstep-page">Edit</a></li>
+                            </div>
+                            <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                            <div class="property-section"></div>
+                                <h3>Duration</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <h3>Improvement</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <h3>feedback</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                            </div>
+        </div>
+    </section>
+
+    <section data-role="page" id="step2-page">
+        <header data-role="header">
+            <h1>Workout</h1>
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+                <li class="flex-stretch"></li>
+                <li><a href="#addstep-page">Add</a></li>
+            </ul>
+        </header>
+        <div class="flex-evenly step-inform-section">
+            <div>
+            <h2>Step</h2>
+            <p>3</p>
+            </div>  
+            <div>
+            <h2>Time</h2>
+            <p>5</p>
+            </div>      
+        </div>
+        <div data-role="main" class="mysteps">
+                <div class="feed-section">
+                    <div class="feed-title flex-center">
+                        <p>STEP #3</p>
+                        <li><a href="#editstep-page">Edit</a></li>
+                    </div>
+                    <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                    <div class="property-section"></div>
+                        <h3>Duration</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h3>Improvement</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h3>feedback</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                    </div>
+                    <div class="feed-section">
+                        <div class="feed-title flex-center">
+                            <p>STEP #2</p>
+                            <li><a href="#editstep-page">Edit</a></li>
+                        </div>
+                        <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                        <div class="property-section"></div>
+                            <h3>Duration</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>Improvement</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>feedback</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                        </div>
+                        <div class="feed-section">
+                            <div class="feed-title flex-center">
+                                <p>STEP #1</p>
+                                <li><a href="#editstep-page">Edit</a></li>
+                            </div>
+                            <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                            <div class="property-section"></div>
+                                <h3>Duration</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <h3>Improvement</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <h3>feedback</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                            </div>
+        </div>
+    </section>
+
+    <section data-role="page" id="step3-page">
+        <header data-role="header">
+            <h1>Piano Practice</h1>
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+                <li class="flex-stretch"></li>
+                <li><a href="#addstep-page">Add</a></li>
+            </ul>
+        </header>
+        <div class="flex-evenly step-inform-section">
+            <div>
+            <h2>Step</h2>
+            <p>3</p>
+            </div>  
+            <div>
+            <h2>Time</h2>
+            <p>4</p>
+            </div>      
+        </div>
+        <div data-role="main" class="mysteps">
+                <div class="feed-section">
+                    <div class="feed-title flex-center">
+                        <p>STEP #3</p>
+                        <li><a href="#editstep-page">Edit</a></li>
+                    </div>
+                    <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                    <div class="property-section"></div>
+                        <h3>Duration</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h3>Improvement</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h3>feedback</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                    </div>
+                    <div class="feed-section">
+                        <div class="feed-title flex-center">
+                            <p>STEP #2</p>
+                            <li><a href="#editstep-page">Edit</a></li>
+                        </div>
+                        <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                        <div class="property-section"></div>
+                            <h3>Duration</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>Improvement</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>feedback</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                        </div>
+                        <div class="feed-section">
+                            <div class="feed-title flex-center">
+                                <p>STEP #1</p>
+                                <li><a href="#editstep-page">Edit</a></li>
+                            </div>
+                            <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                            <div class="property-section"></div>
+                                <h3>Duration</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <h3>Improvement</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <h3>feedback</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                            </div>
+        </div>
+    </section>
+
+    <section data-role="page" id="step4-page">
+        <header data-role="header">
+            <h1>Lettering Design</h1>
+            <ul>
+                <li><a href="#" data-rel="back">Back</a></li>
+                <li class="flex-stretch"></li>
+                <li><a href="#addstep-page">Add</a></li>
+            </ul>
+        </header>
+        <div class="flex-evenly step-inform-section">
+            <div>
+            <h2>Step</h2>
+            <p>5</p>
+            </div>  
+            <div>
+            <h2>Time</h2>
+            <p>8</p>
+            </div>   
+        </div>
+        <div data-role="main" class="mysteps">
+                <div class="feed-section">
+                    <div class="feed-title flex-center">
+                        <p>STEP #5</p>
+                        <li><a href="#editstep-page">Edit</a></li>
+                    </div>
+                    <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                    <div class="property-section"></div>
+                        <h3>Duration</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h3>Improvement</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <h3>feedback</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                    </div>
+                    <div class="feed-section">
+                        <div class="feed-title flex-center">
+                            <p>STEP #4</p>
+                            <li><a href="#editstep-page">Edit</a></li>
+                        </div>
+                        <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                        <div class="property-section"></div>
+                            <h3>Duration</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>Improvement</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h3>feedback</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                        </div>
+                        <div class="feed-section">
+                            <div class="feed-title flex-center">
+                                <p>STEP #3</p>
+                                <li><a href="#editstep-page">Edit</a></li>
+                            </div>
+                            <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
+                            <div class="property-section"></div>
+                                <h3>Duration</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <h3>Improvement</h3>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <h3>feedback</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                            </div>
+        </div>
+    </section>
+</body>
+
+</html>
