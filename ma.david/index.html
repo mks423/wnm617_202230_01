@@ -7,113 +7,214 @@
     <title>GIANTSTEP</title>
     <base href="/aau/wnm617/ma.david/">
     <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
-    <link rel="stylesheet" href="lib/css/app.css">
-    <link rel="stylesheet" href="lib/css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <script src="lib/js/jquery-2.2.4.min.js"></script>
     <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="lib/js/app.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/signin.js"></script>
 </head>
-<body>
-
-
-    <section data-role="page" id="initial-page">
-        <div data-role="main">
+<body>    
+    <section data-role="page" id="signin-page">
+        <div data-role="main" class="display-flex flex-column">
+            <div class="flex-stretch"></div>
             <div class="logo-section">
+                <!-- <img src="images/main_logo.png" alt="" style="width:90vmin; height:90vmin;"> -->
                 <h1>GIANTSTEP</h1>
             </div>
-            <div class="welcome-section">
-                <h2>Welcome</h2>
-            </div>
-            <form id="signin-form" class="form text-align-center">
+            <form id="signin-form" class="form" data-ajax="false">
                 <div class="form-control">
-                    <a href="#username-page" class="form-button">Sign In</a>
+                   <label for="signin-username" class="form-label">Sign in to Giantstep</label>
+                   <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Username">
+                </div>
+                <div class="form-control">
+                   <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Password">
+                </div>
+                <!-- <input type="submit" data-role="none"> -->
+                <div class="form-control">
+                   <button type="submit" class="form-button signin-btn" data-role="none">Sign In</button>
                 </div>
                 <div class="register-section">
                     <p>Don't have an ID? <a href="#signup-page" class="underline">Create yours now</a></p>
                 </div>
             </form>
+            <div class="flex-stretch"></div>
     </section>
-
-    <section data-role="page" id="username-page">
-        <header data-role="header">
-            <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
-            </ul>
-        </header>
-        <div data-role="main">
-            <div class="signin-guide-section">
-            <h1>Sign in</h1>
-            <p>Use your account</p>
-            </div>
-            <form id="signin-form" class="form">
-            <div class="form-control">
-                <label for="sigin-username" class="form-label">Username</label>
-                <input type="text" id="signin-username" class="form-input" placeholder="Enter your Username">
-            </div>
-            <div class="continue-btn">
-                <a href="#password-page" class="form-button">Continue</a>
-            </div>
-            </form>
-        </div>
-    </section>
-
-    <section data-role="page" id="password-page">
-        <header data-role="header">
-            <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
-            </ul>
-        </header>
-        <div data-role="main">
-            <div class="signin-guide-section">
-                <h2>Hi Henry</h2>
-                <p>Henry10@giantstep.com</p>
-            </div>
-            <form id="signin-form" class="form">
-                <div class="form-control">
-                    <label for="sigin-password" class="form-label">Password</label>
-                    <input type="password" id="signin-password" class="form-input" placeholder="Enter your Password">
-                </div>
-            <div class="continue-btn">
-                <a href="#home-page" class="form-button">Continue</a>
-            </div>
-            </form>
-        </div>
-    </section>
-
     <section data-role="page" id="signup-page">
-        <header data-role="header">
-            <h1>Signup</h1>
-            <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
-                <li class="flex-stretch"></li>
-                <!-- <li><a href="#profile-page">Signup</a></li> -->
+        <div data-role="main" class="signup display-flex flex-column">
+            <div class="flex-stretch"></div>
+            <div class="logo-section">
+                <!-- <img src="images/main_logo.png" alt="" style="width:90vmin; height:90vmin;"> -->
+                <h1>GIANTSTEP</h1>
+            </div>
+            <form id="signup" class="form" data-ajax="false">
+                <div class="form-control">
+                    <label for="signup-name" class="form-label">Create your account</label>
+                    <input type="text" id="signup-name" class="form-input" data-role="none" placeholder="Name">
+                </div>
+                <div class="form-control">
+                    <!-- <label for="signup-username" class="form-label">Userame</label> -->
+                    <input type="text" id="signup-username" class="form-input" data-role="none" placeholder="Username">
+                </div>
+                <div class="form-control">
+                    <!-- <label for="signup-password" class="form-label">Password</label> -->
+                    <input type="text" id="signup-password" class="form-input" data-role="none" placeholder="Password">
+                </div>
+                <label for="signup-name" class="form-label">Date of birth</label>
+                <div class="birthtap">
+                <div class="form-control">
+                    <select id="birth-month" class="form-input birth-month" data-role="none">
+                        <option value="Month">Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                 </div>
+                 <div class="form-control">
+                    <select id="birth-date" class="form-input birth-date" data-role="none">
+                        <option value="Date">Day</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                 </div>
+                 <div class="form-control">
+                    <select id="birth-year" class="form-input birth-year" data-role="none">
+                        <option value="Year">Year</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                        <option value="1994">1994</option>
+                        <option value="1993">1993</option>
+                        <option value="1992">1992</option>
+                        <option value="1991">1991</option>
+                        <option value="1990">1990</option>
+                        <option value="1989">1989</option>
+                        <option value="1988">1988</option>
+                        <option value="1987">1987</option>
+                        <option value="1986">1986</option>
+                        <option value="1985">1985</option>
+                        <option value="1984">1984</option>
+                        <option value="1983">1983</option>
+                        <option value="1982">1982</option>
+                        <option value="1981">1981</option>
+                        <option value="1980">1980</option>
+                        <option value="1979">1979</option>
+                        <option value="1978">1978</option>
+                    
 
-            </ul>
-        </header>
-        <div data-role="main" class="signup">
-            <form id="signup" class="form">
-                <div class="form-control">
-                    <label for="signup-name" class="form-label">Name</label>
-                    <input type="text" id="signin-username" class="form-input" placeholder="Name">
+                    </select>
+                 </div>
                 </div>
-                <div class="form-control">
-                    <label for="signup-username" class="form-label">Userame</label>
-                    <input type="text" id="signin-username" class="form-input" placeholder="Username">
+                <div class="termsandconditions">
+                <label class="checkbox">
+                    <input type="checkbox" class="signin-checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="agreement"><p>By signing up, you agree to the <a href="#" class="termsandconditions" data-activate="#termsandconditions-popup" data-role="none">Terms of Service</a>and <a href="#" class="privacy" data-activate="#privacy-popup" data-role="none">Privacy Policy.</a></p></div>
                 </div>
-                <div class="form-control">
-                    <label for="signup-password" class="form-label">Password</label>
-                    <input type="text" id="signin-username" class="form-input" placeholder="Password">
+                <div class="form-control" data-role="none">
+                    <a href="#home-page" class="form-button signup-btn">Sign Up</a>
                 </div>
-                <div class="signin-btn">
-                    <a href="#home-page" class="form-button">Sign Up</a>
+                <div class="signup-signin">
+                    <p>Already have an ID? <a href="#signin-page" class="underline">Sign In</a></p>
                 </div>
                         
                 </form>
-        </div>
+                <div class="flex-stretch"></div>
+            </div>
+            <div class="modal" id="termsandconditions-popup">
+                <div class="modal-back" data-deactivate="#termsandcontions-popup">
+                    <div class="modal-popup">
+                        <div class="modal-head">Terms of Service</div>
+                        <div class="modal-body overscroll terms-con" data-ajax="false">
+                        <div class="terms-text"><h1>Your agreement</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nesciunt repellat, ratione nisi expedita, alias officia deleniti reiciendis veritatis placeat optio rem earum? Asperiores sit, quidem atque excepturi repellendus dolores dolorum? Suscipit quas similique quod cum repellendus itaque praesentium, alias tenetur ad tempora doloremque, laboriosam harum quia iste, sit fugiat officia doloribus magni dicta! Itaque, maxime cum minus repellendus voluptas praesentium ut eligendi quas commodi placeat quod, laboriosam inventore dignissimos expedita perferendis obcaecati possimus corrupti! Accusantium quos, incidunt sed, qui iusto, accusamus tempora voluptate hic officia quia nihil quas dignissimos odit placeat sapiente. Voluptate esse, blanditiis ad laudantium porro quis atque nulla eum, minima earum, rem dicta. Nesciunt, consequuntur eos in placeat harum sequi ex aut nam quasi, porro corrupti alias aperiam eligendi itaque ab quidem excepturi non beatae ea blanditiis aspernatur voluptas voluptatibus. Aliquid tempore nostrum, aperiam quis repellendus commodi optio reprehenderit voluptatum vero, laborum unde hic. Aperiam inventore soluta voluptas fugiat magni repudiandae debitis maiores sapiente consectetur dicta error in pariatur minima cum eius ea quos adipisci voluptatem, atque tempora iure harum! Officiis, doloremque! Quisquam fugit illo laborum aliquam? Voluptatibus facilis cum debitis, aperiam minima possimus et facere velit delectus, quae neque ex blanditiis ipsa temporibus iste aut.</p></div>
+                        </div>
+                        <div class="modal-foot">
+                            <div class="modal-foot terms-confirm-btn"  data-deactivate="#termsandconditions-popup">Confirm</div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="modal" id="privacy-popup">
+                <div class="modal-back" data-deactivate="#privacy-popup">
+                    <div class="modal-popup">
+                        <div class="modal-head">Privacy Policy</div>
+                        <div class="modal-body overscroll privacy-con" data-ajax="false">
+                        <div class="terms-text"><h1>Your agreement</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nesciunt repellat, ratione nisi expedita, alias officia deleniti reiciendis veritatis placeat optio rem earum? Asperiores sit, quidem atque excepturi repellendus dolores dolorum? Suscipit quas similique quod cum repellendus itaque praesentium, alias tenetur ad tempora doloremque, laboriosam harum quia iste, sit fugiat officia doloribus magni dicta! Itaque, maxime cum minus repellendus voluptas praesentium ut eligendi quas commodi placeat quod, laboriosam inventore dignissimos expedita perferendis obcaecati possimus corrupti! Accusantium quos, incidunt sed, qui iusto, accusamus tempora voluptate hic officia quia nihil quas dignissimos odit placeat sapiente. Voluptate esse, blanditiis ad laudantium porro quis atque nulla eum, minima earum, rem dicta. Nesciunt, consequuntur eos in placeat harum sequi ex aut nam quasi, porro corrupti alias aperiam eligendi itaque ab quidem excepturi non beatae ea blanditiis aspernatur voluptas voluptatibus. Aliquid tempore nostrum, aperiam quis repellendus commodi optio reprehenderit voluptatum vero, laborum unde hic. Aperiam inventore soluta voluptas fugiat magni repudiandae debitis maiores sapiente consectetur dicta error in pariatur minima cum eius ea quos adipisci voluptatem, atque tempora iure harum! Officiis, doloremque! Quisquam fugit illo laborum aliquam? Voluptatibus facilis cum debitis, aperiam minima possimus et facere velit delectus, quae neque ex blanditiis ipsa temporibus iste aut.</p></div>
+                        </div>
+                        <div class="modal-foot">
+                            <div class="modal-foot privacy-confirm-btn"  data-deactivate="#privacy-popup">Confirm</div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
     </section>
 
     <section data-role="page" id="home-page">
@@ -162,11 +263,11 @@
                 </div>
                 <div class="form-control">
                     <label for="add-label" class="form-label">Label Name</label>
-                    <input type="type" id="add-path" class="form-input" placeholder="Add a Label">
+                    <input type="type" id="add-label" class="form-input" placeholder="Add a Label">
                 </div>
                 <div class="form-control">
                     <label for="add-description" class="form-label">Description</label>
-                    <input type="type" id="add-path" class="form-input" placeholder="Add a Description">
+                    <input type="type" id="add-description" class="form-input" placeholder="Add a Description">
                 </div>
                 </form>
         </div>
@@ -282,19 +383,19 @@
             <form id="addstep-form" class="form">
                 <div class="form-control">
                     <label for="add-path" class="form-label">Path Category</label>
-                    <input type="type" id="edit-path" class="form-input" placeholder="Path Category">
+                    <input type="type" id="editstep-path" class="form-input" placeholder="Path Category">
                 </div>
                 <div class="form-control">
                     <label for="add-step" class="form-label">Step name</label>
-                    <input type="type" id="edit-step" class="form-input" placeholder="Step Name">
+                    <input type="type" id="editstep-step" class="form-input" placeholder="Step Name">
                 </div>
                 <div class="form-control">
                     <label for="add-duration" class="form-label">Duration</label>
-                    <input type="type" id="edit-duration" class="form-input" placeholder="Duration">
+                    <input type="type" id="editstep-duration" class="form-input" placeholder="Duration">
                 </div>
                 <div class="form-control">
                     <label for="add-description" class="form-label">Description</label>
-                    <input type="type" id="edit-description" class="form-input" placeholder="Description">
+                    <input type="type" id="editstep-description" class="form-input" placeholder="Description">
                 </div>
                 </form>
         </div>
@@ -389,7 +490,7 @@
         <header data-role="header">
             <h1>Profile</h1>
             <ul>
-                <li><a href="#initial-page">Logout</a></li>
+                <li><a href="#signin-page">Logout</a></li>
                 <li class="flex-stretch"></li>
                 <li><a href="#edit-profile-page">Edit</a></li>
             </ul>
@@ -464,23 +565,23 @@
             <form id="edit-user-profile" class="form">
                 <div class="form-control">
                     <label for="edit-username" class="form-label">Username</label>
-                    <input type="text" id="signin-username" class="form-input" placeholder="henry10">
+                    <input type="text" id="editprofile-username" class="form-input" placeholder="henry10">
                 </div>
                 <div class="form-control">
                     <label for="edit-website" class="form-label">Website</label>
-                    <input type="text" id="signin-username" class="form-input" placeholder="henry10.com">
+                    <input type="text" id="editprofile-website" class="form-input" placeholder="henry10.com">
                 </div>
                 <div class="form-control">
                     <label for="edit-bio" class="form-label">Bio</label>
-                    <input type="text" id="signin-username" class="form-input">
+                    <input type="text" id="editprofile-bio" class="form-input">
                 </div>
                 <div class="form-control">
                     <label for="edit-email" class="form-label">Email</label>
-                    <input type="text" id="signin-username" class="form-input" placeholder="henry10@giantstep.com">
+                    <input type="text" id="editprofile-email" class="form-input" placeholder="henry10@giantstep.com">
                 </div>
                 <div class="form-control">
                     <label for="edit-phonenumber" class="form-label">Phone Number</label>
-                    <input type="text" id="signin-username" class="form-input" placeholder="Phone Number">
+                    <input type="text" id="editprofile-phone" class="form-input" placeholder="Phone Number">
                 </div>             
                 </form>
         </div>

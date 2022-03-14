@@ -13,7 +13,7 @@
   --color-neutral-lighter: #ddd;
   --color-neutral-light: #eee;
   --color-neutral-medium: #999;
-  --color-neutral-dark: #444;
+  --color-neutral-dark: #1b2027;
 
   --color-main-light: #4b6078;
 
@@ -24,6 +24,8 @@ body {
   margin: 0;
   font-size: 100%;
   /* font-family: var(--font-sans); */
+  background-color: #1b2027;
+  color: white;
 }
 
 h1,
@@ -85,26 +87,31 @@ li {
   margin: 1em 0;
 }
 .ui-mobile .form-label {
-  font-size: 0.8em;
-  color: var(--color-neutral-medium);
+  /*  font-size: 0.8em; */
+  /* color: var(--color-neutral-medium); */
   margin: 0.5em 0;
 }
 .form-input {
   display: inline-block;
   width: 100%;
   border-width: 0;
-  background-color: var(--color-neutral-lighter);
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #777;
+  border-radius: 5px;
   font: inherit;
+  color: #777;
   padding: 0.5em 1em;
-  margin: 0;
+  margin: 2% 0;
   outline: 0;
 }
 .form-button {
   display: inline-block;
   width: 100%;
   border-width: 0;
-  background-color: var(--color-neutral-light);
+  background-color: white;
+  border-radius: 5px;
   font: inherit;
+  font-weight: 600;
   padding: 0.5em 1em;
   margin: 0;
   outline: 0;
@@ -140,7 +147,7 @@ li {
   height: var(--header-height);
   line-height: var(--header-height);
   border-width: 0;
-  background-color: white;
+  background-color: #1b2027;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
