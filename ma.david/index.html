@@ -8,7 +8,7 @@
     <base href="/aau/wnm617/ma.david/">
     <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -27,8 +27,8 @@
                 <h1>GIANTSTEP</h1>
             </div>
             <form id="signin-form" class="form" data-ajax="false">
+                <label for="signin-username" class="form-label">Sign in to Giantstep</label>
                 <div class="form-control">
-                   <label for="signin-username" class="form-label">Sign in to Giantstep</label>
                    <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Username">
                 </div>
                 <div class="form-control">
@@ -52,9 +52,10 @@
                 <h1>GIANTSTEP</h1>
             </div>
             <form id="signup" class="form" data-ajax="false">
-                <div class="form-control">
-                    <label for="signup-name" class="form-label">Create your account</label>
-                    <input type="text" id="signup-name" class="form-input" data-role="none" placeholder="Name">
+                <label for="signup-name" class="form-label">Create your account</label>
+                <div class="form-control display-flex">
+                    <input type="text" id="signup-first-name" class="form-input signup-name" data-role="none" placeholder="First name">
+                    <input type="text" id="signup-last-name" class="form-input signup-name" data-role="none" placeholder="Last name">
                 </div>
                 <div class="form-control">
                     <!-- <label for="signup-username" class="form-label">Userame</label> -->
@@ -62,132 +63,41 @@
                 </div>
                 <div class="form-control">
                     <!-- <label for="signup-password" class="form-label">Password</label> -->
-                    <input type="text" id="signup-password" class="form-input" data-role="none" placeholder="Password">
+                    <input type="password" id="signup-password" class="form-input" data-role="none" placeholder="Password">
                 </div>
-                <label for="signup-name" class="form-label">Date of birth</label>
-                <div class="birthtap">
                 <div class="form-control">
-                    <select id="birth-month" class="form-input birth-month" data-role="none">
-                        <option value="Month">Month</option>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
-                    </select>
+                    <input type="password" id="signup-password-confirm" data-role="none" class="form-input" placeholder="Confirm Password">
                  </div>
-                 <div class="form-control">
-                    <select id="birth-date" class="form-input birth-date" data-role="none">
-                        <option value="Date">Day</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                    </select>
-                 </div>
-                 <div class="form-control">
-                    <select id="birth-year" class="form-input birth-year" data-role="none">
-                        <option value="Year">Year</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                        <option value="2017">2017</option>
-                        <option value="2016">2016</option>
-                        <option value="2015">2015</option>
-                        <option value="2014">2014</option>
-                        <option value="2013">2013</option>
-                        <option value="2012">2012</option>
-                        <option value="2011">2011</option>
-                        <option value="2010">2010</option>
-                        <option value="2009">2009</option>
-                        <option value="2008">2008</option>
-                        <option value="2007">2007</option>
-                        <option value="2006">2006</option>
-                        <option value="2005">2005</option>
-                        <option value="2004">2004</option>
-                        <option value="2003">2003</option>
-                        <option value="2002">2002</option>
-                        <option value="2001">2001</option>
-                        <option value="2000">2000</option>
-                        <option value="1999">1999</option>
-                        <option value="1998">1998</option>
-                        <option value="1997">1997</option>
-                        <option value="1996">1996</option>
-                        <option value="1995">1995</option>
-                        <option value="1994">1994</option>
-                        <option value="1993">1993</option>
-                        <option value="1992">1992</option>
-                        <option value="1991">1991</option>
-                        <option value="1990">1990</option>
-                        <option value="1989">1989</option>
-                        <option value="1988">1988</option>
-                        <option value="1987">1987</option>
-                        <option value="1986">1986</option>
-                        <option value="1985">1985</option>
-                        <option value="1984">1984</option>
-                        <option value="1983">1983</option>
-                        <option value="1982">1982</option>
-                        <option value="1981">1981</option>
-                        <option value="1980">1980</option>
-                        <option value="1979">1979</option>
-                        <option value="1978">1978</option>
-                    
-
-                    </select>
-                 </div>
+                <label for="date-of-birth" class="form-label">Date of birth</label>
+                <div class="birthtap">
+                    <div class="form-control">
+                        <select class="birth-select" name="yy" id="year" data-role="none"></select>
+                    </div>
+                    <div class="form-control">
+                        <select class="birth-select" name="mm" id="month" data-role="none"></select> 
+                    </div> 
+                    <div class="form-control">
+                        <select class="birth-select" name="dd" id="day" data-role="none"></select>
+                    </div>
                 </div>
                 <div class="termsandconditions">
-                <label class="checkbox">
-                    <input type="checkbox" class="signin-checkbox">
-                    <span class="checkmark"></span>
-                </label>
-                <div class="agreement"><p>By signing up, you agree to the <a href="#" class="termsandconditions" data-activate="#termsandconditions-popup" data-role="none">Terms of Service</a>and <a href="#" class="privacy" data-activate="#privacy-popup" data-role="none">Privacy Policy.</a></p></div>
-                </div>
-                <div class="form-control" data-role="none">
-                    <a href="#home-page" class="form-button signup-btn">Sign Up</a>
-                </div>
-                <div class="signup-signin">
-                    <p>Already have an ID? <a href="#signin-page" class="underline">Sign In</a></p>
-                </div>
-                        
-                </form>
+                    <label class="checkbox">
+                        <input type="checkbox" class="signin-checkbox" data-role="none">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="agreement"><p>By signing up, you agree to the <a href="#" class="termsandconditions" data-activate="#termsandconditions-popup" data-role="none">Terms of Service</a> and <a href="#" class="privacy" data-activate="#privacy-popup" data-role="none">Privacy Policy.</a></p></div>
+                    </div>
+                    <div class="form-control" data-role="none">
+                        <a href="#home-page" class="form-button signup-btn">Sign Up</a>
+                    </div>
+                    <div class="signup-signin">
+                        <p>Already have an ID? <a href="#signin-page" class="underline">Sign In</a></p>
+                    </div>
+                            
+                    </form>
                 <div class="flex-stretch"></div>
+
+                </div>  
             </div>
             <div class="modal" id="termsandconditions-popup">
                 <div class="modal-back" data-deactivate="#termsandcontions-popup">
@@ -219,7 +129,11 @@
 
     <section data-role="page" id="home-page">
         <header data-role="header">
-            <h1>GIANTSTEP</h1>
+            <ul>
+                <li class="logo"><h1>GIANTSTEP</h1></li>
+                <li class="flex-stretch"></li>
+                <li class="header-menu-icon" data-activate="#modal-nav-menu"><img src="images/header-menu-icon.png" alt="Menu"></li>
+
         </header>
         <div data-role="main">
             <div class="greeting-section">
@@ -227,30 +141,88 @@
             </div>
             <div class="title-section flex-center">
                 <h2 class="title-mypath">My Path</h2>
-                <a href="#addpath-page">Add</a>
+                <a href="#addpath-page"><img class="icon-add" src="images/icon-add.png" alt=""></a>
             </div>
             <div class="pathlist-section">
-                <div class="listbox listbox1"><a href="#step1-page">Piano practice</a></div>
-                <div class="listbox listbox2"><a href="#step2-page">Workout</a></div>
-                <div class="listbox listbox3"><a href="#step3-page">Reading</a></div>
-                <div class="listbox listbox4"><a href="#step4-page">Lettering Design</a></div>
+                <a href="#step1-page">
+                <div class="listbox listbox1" style="background-image:url(images/path-btn.png) no-repeat auto;">
+                   <div class="path-title"><h2>Piano practice</h2></div> 
+                    <div class="display-flex">
+                        <div class="path-info">
+                            <h6>3 steps</h6>
+                            <h6>Feb 20</h6>
+                        </div>
+                        <div class="path-icon"><img class="icon" src="images/icon-music.png" alt=""></div> 
+                    </div>
+                </div>
+                </a>
+                <a href="#step2-page">
+                    <div class="listbox listbox2">
+                       <div class="path-title"><h2>Workout</h2></div>
+                        <div class="display-flex">
+                            <div class="path-info">
+                                <h6>3 steps</h6>
+                                <h6>Feb 20</h6>
+                            </div>
+                              <div class="path-icon"><img class="icon" src="images/icon-dumbbells.png" alt=""></div>
+                        </div>
+                    </div>
+                    </a>
+                <a href="#step3-page">
+                    <div class="listbox listbox3">
+                      <div class="path-title"> <h2>Lettering Design</h2></div> 
+                        <div class="display-flex">
+                            <div class="path-info">
+                                <h6>3 steps</h6>
+                                <h6>Feb 20</h6>
+                            </div>
+                           <div class="path-icon"><img class="icon" src="images/icon-char.png" alt=""></div>
+                        </div>
+                    </div>
+                    </a>
+                <a href="#step4-page">
+                    <div class="listbox listbox4">
+                     <div class="path-title"> <h2>Reading</h2></div>  
+                        <div class="display-flex">
+                            <div class="path-info">
+                                <h6>3 steps</h6>
+                                <h6>Feb 20</h6>
+                            </div>
+                           <div class="path-icon"><img class="icon" src="images/icon-book.png" alt=""></div>
+                        </div>
+                    </div>
+                    </a>  
             </div>
         </div>
-        <footer data-role="footer">
-            <ul>
-                <li><a href="#home-page">HOME</a></li>
-                <li><a href="#step-page">STEP</a></li>
-                <li><a href="#analysis-page">ANALYSIS</a></li>
-                <li><a href="#profile-page">PROFILE</a></li>
-            </ul>
-        </footer>
+
+    
+    <div class="modal" id="modal-nav-menu">
+        <div class="modal-back" data-deactivate="#modal-nav-menu">
+            <div class="nav-con">
+            <a href="#profile-page" class="menu-profile">
+                <div class="display-flex menu-profile-con">
+                    <div class="menu-profile-icon"><img src="images/icon-profile.png" alt=""></div>
+                    <div class="menu-profile-title">Profile</div>
+                </div>
+            </a>
+            <a href="#setting" class="menu-setting">
+                <div class="display-flex menu-setting-con">
+                    <div class="menu-setting-icon"><img src="images/icon-setting.png" alt=""></div>
+                    <div class="menu-setting-title">Setting</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+    <footer data-role="footer" data-template="#footer-template"></footer>
+
     </section>
 
     <section data-role="page" id="addpath-page">
         <header data-role="header">
             <h1>Add Path</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img src="images/icon-back.png" alt=""></a></li>
                 <li class="flex-stretch"></li>
                 <li><a href="#home-page">Add</a></li>
             </ul>
@@ -329,76 +301,189 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
                             </div>
         </div>
-        <footer data-role="footer">
-            <ul>
-                <li><a href="#home-page">HOME</a></li>
-                <li><a href="#step-page">STEP</a></li>
-                <li><a href="#analysis-page">ANALYSIS</a></li>
-                <li><a href="#profile-page">PROFILE</a></li>
-            </ul>
-        </footer>
+        <footer data-role="footer" data-template="#footer-template"></footer>
+
     </section>
 
     <section data-role="page" id="editstep-page">
-        <header data-role="header">
-            <h1>Edit Step</h1>
-            <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#step-page">Edit</a></li>
-            </ul>
-        </header>
-        <div data-role="main">
-            <form id="editpath-form" class="form">
-                <div class="form-control">
-                    <label for="edit-path" class="form-label">Path Category</label>
-                    <input type="type" id="edit-path" class="form-input" placeholder="Path Category">
-                </div>
-                <div class="form-control">
-                    <label for="edit-step" class="form-label">Step name</label>
-                    <input type="type" id="edit-step" class="form-input" placeholder="Edit Step">
-                </div>
-                <div class="form-control">
-                    <label for="edit-duration" class="form-label">Duration</label>
-                    <input type="type" id="edit-duration" class="form-input" placeholder="Edit Duration">
-                </div>
-                <div class="form-control">
-                    <label for="edit-description" class="form-label">Description</label>
-                    <input type="type" id="edit-description" class="form-input" placeholder="Edit Description">
-                </div>
-                </form>
-        </div>
+            <header data-role="header">
+                <h1>Edit Step</h1>
+                <ul>
+                    <li><a href="#" data-rel="back"><img src="images/icon-back.png" class="icon-back" alt=""></a></li>
+                    <li class="flex-stretch"></li>
+                </ul>
+            </header>
+            <div data-role="main" class="mysteps">
+                <div class="feed-section">
+                    <div class="feed-title flex-center">
+                        <div class="stepnum-con">
+                        <p>Step #4</p>
+                        <div class="location-con display-flex">
+                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Add Location</h6>
+                        </div>    
+                        </div>
+                    </div>
+                    <div class="feed-img"><img src="images/piano.png" alt=""></a></div>                    <div class="add-time-con display-flex">
+                        <div class="add-start-time">
+                            <div><h4>Start time</h4></div>
+                                <div class="time-select display-flex">
+                                    <div>
+                                        <select data-role="none" class="add-select-time" name="Time">
+                                            <option value="1">1</option></div>
+                                            <option value="2">2</option></div>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select data-role="none" class="add-select-time" name="Time">
+                                            <option value="1">00</option></div>
+                                            <option value="2">10</option></div>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select data-role="none" class="add-select-ampm" name="AM">
+                                            <option value="am">AM</option>
+                                            <option value="pm">PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="add-end-time">
+                            <div><h4>End time</h4></div>
+                                <div class="time-select display-flex">
+                                    <div>
+                                        <select data-role="none" class="add-select-time" name="Time">
+                                            <option value="1">1</option></div>
+                                            <option value="2">2</option></div>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select data-role="none" class="add-select-time" name="Time">
+                                            <option value="1">00</option></div>
+                                            <option value="2">10</option></div>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <select data-role="none" class="add-select-ampm" name="AM">
+                                            <option value="am">AM</option>
+                                            <option value="pm">PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                        </div>  
+                    </div>
+    
+    
+                        <div class="property-progress">
+                            <h4>Progress</h4>
+                            <div class="progress-select-bar display-flex">
+                                <div class="progress-btn-1st"><h4>Insufficient</h4></div>
+                                <div class="progress-btn-2nd"><h4>Unsatisfied</h4></div>
+                                <div class="progress-btn-3rd"><h4>Nuetral</h4></div>
+                                <div class="progress-btn-4th btn-selected"><h4>Satisfied</h4></div>
+                                <div class="progress-btn-5th"><h4>Perfect</h4></div>
+                          
+                            </div>
+                        </div>
+                        <div class="property-comment">
+                            <h4>Comment</h4>
+                            <div class="comment-box">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto quidem corporis voluptate nihil quod minima, voluptates veniam maiores laboriosam. Ut.</p>
+                            </div>
+                        </div>
+                        <div class="form-control" data-role="none">
+                            <a href="#step1-page" class="form-button addstep-btn" data-role="none">Edit</a>
+                        </div>
     </section>
 
     <section data-role="page" id="addstep-page">
         <header data-role="header">
-            <h1>Edit Step</h1>
+            <h1>Add Step</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img src="images/icon-back.png" class="icon-back" alt=""></a></li>
                 <li class="flex-stretch"></li>
-                <li><a href="#step-page">Add</a></li>
             </ul>
         </header>
-        <div data-role="main">
-            <form id="addstep-form" class="form">
-                <div class="form-control">
-                    <label for="add-path" class="form-label">Path Category</label>
-                    <input type="type" id="editstep-path" class="form-input" placeholder="Path Category">
+        <div data-role="main" class="mysteps">
+            <div class="feed-section">
+                <div class="feed-title flex-center">
+                    <div class="stepnum-con">
+                    <p>Step #4</p>
+                    <div class="location-con display-flex">
+                    <img src="images/icon-location.png" alt="" class="icon-location"><h6>Add Location</h6>
+                    </div>    
+                    </div>
                 </div>
-                <div class="form-control">
-                    <label for="add-step" class="form-label">Step name</label>
-                    <input type="type" id="editstep-step" class="form-input" placeholder="Step Name">
+                <div class="add-img"><img src="images/upload-picture.png" alt=""><p>Upload Image</p></a></div>
+                <div class="add-time-con display-flex">
+                    <div class="add-start-time">
+                        <div><h4>Start time</h4></div>
+                            <div class="time-select display-flex">
+                                <div>
+                                    <select data-role="none" class="add-select-time" name="Time">
+                                        <option value="1">1</option></div>
+                                        <option value="2">2</option></div>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select data-role="none" class="add-select-time" name="Time">
+                                        <option value="1">00</option></div>
+                                        <option value="2">10</option></div>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select data-role="none" class="add-select-ampm" name="AM">
+                                        <option value="am">AM</option>
+                                        <option value="pm">PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="add-end-time">
+                        <div><h4>End time</h4></div>
+                            <div class="time-select display-flex">
+                                <div>
+                                    <select data-role="none" class="add-select-time" name="Time">
+                                        <option value="1">1</option></div>
+                                        <option value="2">2</option></div>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select data-role="none" class="add-select-time" name="Time">
+                                        <option value="1">00</option></div>
+                                        <option value="2">10</option></div>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select data-role="none" class="add-select-ampm" name="AM">
+                                        <option value="am">AM</option>
+                                        <option value="pm">PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                    </div>  
                 </div>
-                <div class="form-control">
-                    <label for="add-duration" class="form-label">Duration</label>
-                    <input type="type" id="editstep-duration" class="form-input" placeholder="Duration">
-                </div>
-                <div class="form-control">
-                    <label for="add-description" class="form-label">Description</label>
-                    <input type="type" id="editstep-description" class="form-input" placeholder="Description">
-                </div>
-                </form>
-        </div>
+
+
+                    <div class="property-progress">
+                        <h4>Progress</h4>
+                        <div class="progress-select-bar display-flex">
+                            <div class="progress-btn-1st"><h4>Insufficient</h4></div>
+                            <div class="progress-btn-2nd"><h4>Unsatisfied</h4></div>
+                            <div class="progress-btn-3rd"><h4>Nuetral</h4></div>
+                            <div class="progress-btn-4th btn-selected"><h4>Satisfied</h4></div>
+                            <div class="progress-btn-5th"><h4>Perfect</h4></div>
+                      
+                        </div>
+                    </div>
+                    <div class="property-comment">
+                        <h4>Comment</h4>
+                        <div class="comment-box">
+                            <p>Add comments</p>
+                        </div>
+                    </div>
+                    <div class="form-control" data-role="none">
+                        <a href="#step1-page" class="form-button addstep-btn" data-role="none">Add</a>
+                    </div>
     </section>
 
     <section data-role="page" id="analysis-page">
@@ -476,14 +561,8 @@
                     </div>
                 </div>
         </div>
-        <footer data-role="footer">
-            <ul>
-                <li><a href="#home-page">HOME</a></li>
-                <li><a href="#step-page">STEP</a></li>
-                <li><a href="#analysis-page">ANALYSIS</a></li>
-                <li><a href="#profile-page">PROFILE</a></li>
-            </ul>
-        </footer>
+        <footer data-role="footer" data-template="#footer-template"></footer>
+
     </section>
 
     <section data-role="page" id="profile-page">
@@ -523,21 +602,15 @@
             <h2>Phone Number</h2>
             <p>-</p>
         </div>
-        <footer data-role="footer">
-            <ul>
-                <li><a href="#home-page">HOME</a></li>
-                <li><a href="#step-page">STEP</a></li>
-                <li><a href="#analysis-page">ANALYSIS</a></li>
-                <li><a href="#profile-page">PROFILE</a></li>
-            </ul>
-        </footer>
+        <footer data-role="footer" data-template="#footer-template"></footer>
+
     </section>
 
     <section data-role="page" id="edit-profile-page">
         <header data-role="header">
             <h1>Edit Profile</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img src="images/icon-back.png" alt=""></a></li>
                 <li class="flex-stretch"></li>
                 <li><a href="#profile-page">Done</a></li>
 
@@ -592,66 +665,213 @@
         <header data-role="header">
             <h1>Piano Practice</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img class="icon-back"src="images/icon-back.png" alt=""></a></li>
                 <li class="flex-stretch"></li>
-                <li><a href="#addstep-page">Add</a></li>
+                <li><a href="#addstep-page"><img class="icon-add" src="images/icon-add.png" alt=""></a></li>
             </ul>
         </header>
         <div class="flex-evenly step-inform-section">
-            <div>
-            <h2>Step</h2>
-            <p>12</p>
+            <div class="steps-con display-flex">
+            <h2>12</h2>
+            <p>Steps</p>
             </div>  
-            <div>
-            <h2>Time</h2>
-            <p>15</p>
+            <div class="time-con display-flex">
+            <h2>15</h2>
+            <p>Hours</p>
             </div>      
         </div>
         <div data-role="main" class="mysteps">
                 <div class="feed-section">
                     <div class="feed-title flex-center">
-                        <p>STEP #12</p>
-                        <li><a href="#editstep-page">Edit</a></li>
-                    </div>
-                    <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
-                    <div class="property-section"></div>
-                        <h3>Duration</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <h3>Improvement</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <h3>feedback</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
-                    </div>
-                    <div class="feed-section">
-                        <div class="feed-title flex-center">
-                            <p>STEP #11</p>
-                            <li><a href="#editstep-page">Edit</a></li>
+                        <div class="stepnum-con">
+                        <p>Step #12</p>
+                        <div class="location-con display-flex">
+                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
+                        </div>    
                         </div>
-                        <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
-                        <div class="property-section"></div>
-                            <h3>Duration</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <h3>Improvement</h3>
-                            <p>Lorem ipsum dolor sit amet.</p>
-                            <h3>feedback</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
+                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
+                    </div>
+                    <div class="feed-img"><img src="images/piano.png" alt=""></a></div>
+                    <div class="property-section">
+                        <div class="property-time">
+                            <h4>Time</h4>
+                            <div class="time-num-con display-flex flex-evenly">
+                                <div class="start-time">
+                                    <h5>Start time</h5>
+                                    <div class="display-felx">
+                                        <span class="time-num">2:00</span>
+                                        <span class="ampm">PM</span>
+                                    </div>
+                                </div>
+                                <div class="end-time">
+                                    <h5>End time</h5>
+                                    <div class="display-felx">
+                                        <span class="time-num">4:20</span>
+                                        <span class="ampm">PM</span>
+                                    </div>
+                                </div>
+                                <div class="total">
+                                    <h5>Total</h5>
+                                    <div class="display-felx">
+                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="property-progress">
+                            <h4>Progress</h4>
+                            <div class="progress-bar display-flex">
+                                <span class="bar"></span>
+                                <span class="stage-1"></span>
+                                <span class="stage-2"></span>
+                                <span class="stage-3"></span>
+                                <span class="better-btn"><h4>Better</h4></span>
+                                <span class="stage-5"></span>
+                            </div>
+                        </div>
+                        <div class="property-comment">
+                            <h4>Comment</h4>
+                            <div class="comment-box">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
+                            </div>
+                        </div>
+
                         <div class="feed-section">
                             <div class="feed-title flex-center">
-                                <p>STEP #10</p>
-                                <li><a href="#editstep-page">Edit</a></li>
+                                <div class="stepnum-con">
+                                <p>Step #12</p>
+                                <div class="location-con display-flex">
+                                <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
+                                </div>    
+                                </div>
+                                <li><a href="#editstep-page"><img class="icon-edit" header-menu-icon" src="images/icon-edit.png" alt=""></a></li>
                             </div>
-                            <div class="feed-img"><img src="https://via.placeholder.com/800" alt=""></a></div>
-                            <div class="property-section"></div>
-                                <h3>Duration</h3>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <h3>Improvement</h3>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <h3>feedback</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique harum perferendis illum, explicabo tenetur modi numquam eius eaque omnis.</p>
-                            </div>
-        </div>
+                            <div class="feed-img"><img src="images/piano.png" alt=""></a></div>
+                            <div class="property-section">
+                                <div class="property-time">
+                                    <h4>Time</h4>
+                                    <div class="time-num-con display-flex flex-evenly">
+                                        <div class="start-time">
+                                            <h5>Start time</h5>
+                                            <div class="display-felx">
+                                                <span class="time-num">2:00</span>
+                                                <span class="ampm">PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="end-time">
+                                            <h5>End time</h5>
+                                            <div class="display-felx">
+                                                <span class="time-num">4:20</span>
+                                                <span class="ampm">PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="total">
+                                            <h5>Total</h5>
+                                            <div class="display-felx">
+                                                <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="property-progress">
+                                    <h4>Progress</h4>
+                                    <div class="progress-bar display-flex">
+                                        <span class="bar"></span>
+                                        <span class="stage-1"></span>
+                                        <span class="stage-2"></span>
+                                        <span class="stage-3"></span>
+                                        <span class="better-btn"><h4>Better</h4></span>
+                                        <span class="stage-5"></span>
+                                    </div>
+                                </div>
+                                <div class="property-comment">
+                                    <h4>Comment</h4>
+                                    <div class="comment-box">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
+                                    </div>
+                                </div>
+                                <div class="feed-section">
+                                    <div class="feed-title flex-center">
+                                        <div class="stepnum-con">
+                                        <p>Step #12</p>
+                                        <div class="location-con display-flex">
+                                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
+                                        </div>    
+                                        </div>
+                                        <li><a href="#editstep-page"><img class="icon-edit" header-menu-icon" src="images/icon-edit.png" alt=""></a></li>
+                                    </div>
+                                    <div class="feed-img"><img src="images/piano.png" alt=""></a></div>
+                                    <div class="property-section">
+                                        <div class="property-time">
+                                            <h4>Time</h4>
+                                            <div class="time-num-con display-flex flex-evenly">
+                                                <div class="start-time">
+                                                    <h5>Start time</h5>
+                                                    <div class="display-felx">
+                                                        <span class="time-num">2:00</span>
+                                                        <span class="ampm">PM</span>
+                                                    </div>
+                                                </div>
+                                                <div class="end-time">
+                                                    <h5>End time</h5>
+                                                    <div class="display-felx">
+                                                        <span class="time-num">4:20</span>
+                                                        <span class="ampm">PM</span>
+                                                    </div>
+                                                </div>
+                                                <div class="total">
+                                                    <h5>Total</h5>
+                                                    <div class="display-felx">
+                                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="property-progress">
+                                            <h4>Progress</h4>
+                                            <div class="progress-bar display-flex">
+                                                <span class="bar"></span>
+                                                <span class="stage-1"></span>
+                                                <span class="stage-2"></span>
+                                                <span class="stage-3"></span>
+                                                <span class="better-btn"><h4>Better</h4></span>
+                                                <span class="stage-5"></span>
+                                            </div>
+                                        </div>
+                                        <div class="property-comment">
+                                            <h4>Comment</h4>
+                                            <div class="comment-box">
+                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
+                                            </div>
+                                        </div>
     </section>
+
+    <div class="modal" id="editordelete-popup">
+        <div class="modal-back modal-editordelete-back" data-deactivate="#editordelete-popup">
+            <div class="modal-editordelete">
+                <div class="editordelete-title">Step #3</div>
+                <div class="modal-body editordelete-con display-flex" data-ajax="false">
+                    <a class="edit-delete" href="#" data-activate="#modal-confirm-delete" data-role="none">
+                        <div class="delete-icon"><img src="images/icon-edit-delete.png" alt=""></div>
+                        <div class="delete-text">Delete</div>
+                    </a>
+                    <a class="edit-edit" href="#editstep-page" data-role="none">
+                        <div class="edit-icon"><img src="images/icon-edit-edit.png" alt=""></div>
+                        <div class="edit-text">Edit</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-confirm-delete">
+        <div class="modal-back delete-confirm-text" data-deactivate="#modal-confirm-delete">
+        <div class="delete-confirm-con">
+            <div class="text-box">Are you sure you want to delete?</div>
+            <div class="respond-con display-flex">
+                <div class="cancel-delete" data-deactivate="#editordelete-popup">Cancel</div>
+                <div class="delete-delete" data-deactivate="#editordelete-popup">Delete</div>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <section data-role="page" id="step2-page">
         <header data-role="header">
@@ -847,6 +1067,21 @@
                             </div>
         </div>
     </section>
+
+    <script type="text/template" id="footer-template">
+        <ul data-role="none" class="nav-icon-set">
+           <li data-role="none">
+               <a data-role="none" class="icon-menu-home active" href="#home-page" data-activateone=".nav-icon-set li:nth-child(1)"></a>
+           </li>
+           <li data-role="none">
+               <a data-role="none" class="icon-menu-steps" href="#step-page" data-activateone=".nav-icon-set li:nth-child(2)"></a>
+           </li>
+           <li data-role="none">
+               <a data-role="none" class="icon-menu-analysis" href="#analysis-page" data-activateone=".nav-icon-set li:nth-child(3)"></a>
+           </li>
+        </ul>
+     </script>
+
 </body>
 
 </html>
