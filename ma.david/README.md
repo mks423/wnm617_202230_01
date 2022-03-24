@@ -1,12 +1,10 @@
 # David Ma
 
-## Class Project Mobile Tech
-
-## Profile🙋🏻‍♂️
+## Profile👋🏻
 
 - https://makyungseok.com/aau/wnm617/ma.david/profile
 
-## Class Projects🧑🏻‍💻
+## Class Projects📱
 
 - https://makyungseok.com/aau/wnm617/ma.david/csszengarden
 - https://makyungseok.com/aau/wnm617/ma.david
