@@ -2,7 +2,15 @@
 
 ## Class Project Mobile Tech
 
-## Important Links
+## Profile🙋🏻‍♂️
 
-- https://makyungseok.com/portfolio/
+- https://makyungseok.com/aau/wnm617/ma.david/profile
+
+## Class Projects🧑🏻‍💻
+
+- https://makyungseok.com/aau/wnm617/ma.david/csszengarden
 - https://makyungseok.com/aau/wnm617/ma.david
+
+## Portfolio Link💼
+
+- https://makyungseok.com/portfolio
