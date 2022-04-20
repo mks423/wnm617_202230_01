@@ -1,9 +1,21 @@
-
 $(() => {
    checkUserId();
 
    // EVENT DELEGATION
    $(document)
+
+   .on("pagecontainerbeforeshow", function(event, ui){
+      console.log(ui.toPage[0].id)
+
+      // PAGE ROUTING
+      switch(ui.toPage[0].id) {
+         case "home-page": HomePage(); break;
+         case "step-page": StepPage(); break;
+         case "profile-page": ProfilePage(); break;
+      }
+   })
+
+
 
    // FORM SUBMISSIONS
    .on("submit", "#signin-form", function(e) {
