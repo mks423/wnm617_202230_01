@@ -325,8 +325,40 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  alight-items: center;
+  align-items: center;
 }
+/* modifyinh */
+.step-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding: 0 1em;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: auto;
+}
+.step-list-item a {
+  display: flex;
+  font-weight: normal;
+  margin: 1em 0;
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+}
+.step-list-item a:hover {
+  text-decoration: none;
+}
+
+.step-list-body {
+  color:white;
+  padding: 1em;
+}
+.step-list-name {
+  font-size: 1.3em;
+}
+
+/* 
 
 .listbox {
   position: relative;
@@ -339,7 +371,7 @@ li {
   padding: 3.5vw;
   border-radius: 5px;
   margin: 2vw;
-}
+} */
 
 /* top right bottom left */
 .title-mypath {

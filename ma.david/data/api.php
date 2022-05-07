@@ -37,8 +37,8 @@ function makeQuery($c,$ps,$p,$makeResults=true) {
       $r = $makeResults ? fetchAll($stmt) : [];
 
       return [
-         // "statement"=>$ps,
-         // "params"=>$p,
+         "statement"=>$ps,
+         "params"=>$p,
          "result"=>$r
       ];
    } catch(PDOException $e) {
@@ -72,7 +72,12 @@ function makeStatement($data) {
       case "locations_by_step_id":
          return makeQuery($c, "SELECT * FROM `617_track_locations` WHERE `step_id` = ?", $p);
 
-
+      case "recent_step_locations":
+         return makeQuery($c,"SELECT *
+            FROM `617_track_steps` a
+            JOIN `617_track_locations` l
+            ON a.id = l.step_id
+         ");
 
       case "check_signin":
          return makeQuery($c, "SELECT id from `617_track_users` WHERE `username` = ? AND `password` = md5(?)", $p);
