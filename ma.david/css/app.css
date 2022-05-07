@@ -327,7 +327,8 @@ li {
   justify-content: center;
   align-items: center;
 }
-/* modifyinh */
+
+/* Animal List */
 .step-list {
   list-style-type: none;
   padding: 0;
@@ -349,18 +350,21 @@ li {
 .step-list-item a:hover {
   text-decoration: none;
 }
-
+.step-list-image img {
+  width: 1em;
+  vertical-align: text-bottom;
+}
 .step-list-body {
-  color:white;
   padding: 1em;
 }
 .step-list-name {
   font-size: 1.3em;
 }
+/*  */
 
-/* 
 
-.listbox {
+
+/* .listbox {
   position: relative;
   display: inline-block;
   background-image: url(../images/path-btn.png);
@@ -374,7 +378,7 @@ li {
 } */
 
 /* top right bottom left */
-.title-mypath {
+/* .title-mypath {
   font-weight: 300;
 }
 .path-title {
@@ -402,7 +406,7 @@ li {
   width: 3em;
   margin-top: -1em;
   opacity: 0.2;
-}
+} */
 
 /* my steps */
 
@@ -421,7 +425,7 @@ li {
   width: 80%;
   background-image: url(../images/step-info-bg.png);
   background-size: contain;
-  background-positon: center center;
+  background-position: center center;
   background-repeat: no-repeat;
   border-radius: 90px;
   text-align: center;

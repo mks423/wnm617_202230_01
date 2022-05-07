@@ -7,6 +7,6 @@ const HomePage = async() => {
    })
 
    console.log(steps)
-   $("#home-page .path-title").html(makeStepList(steps));
+   $("#home-page .step-list").html(makeStepList(steps));
 
 }
