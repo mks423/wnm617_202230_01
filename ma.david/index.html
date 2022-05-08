@@ -24,7 +24,10 @@
     <script src="js/maps.js"></script>
     <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 
-
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvO8Mal69A3Ks-xAYHVtyrOBfWEA1TZw"
+    defer
+  ></script>
 
 </head>
 <body>    
@@ -151,16 +154,6 @@
                 <a href="#addpath-page" data-activate="#modal-add-path"><img class="icon-add" src="images/icon-add.png" alt=""></a>
             </div>
         <ul class="step-list">
-            <li class="step-list-item">
-                <a href="#step-profile-page">
-                    <div class="step-list-image"><img src="" alt="">
-                    </div>
-                    <div class="step-list-body">
-                        <div class="step-list-name"></div>
-                        <div class="step-list-progress"></div>
-                    </div>
-                </a>
-            </li>
         </ul>
             
 
@@ -563,7 +556,8 @@
     </section>
 
     <section data-role="page" id="location-page">  
-        <div data-role="main" class="map-placeholder">
+        <div data-role="main">
+            <div class="map"></div>
             <div class="location-search display-flex">
                 <li><a href="#" data-rel="back"><img src="images/icon-back.png" class="icon-back" alt=""></a></li>
                 <form class="hotdog flex-stretch" data-ajax="false" id="location-search">
@@ -883,47 +877,7 @@
                 <li><a href="#edit-profile-page"><img class="icon-add" src="images/icon-edit-edit.png" alt=""></a></li>
             </ul>
         </header>
-        <div data-role="main" class="display-flex flex-column">
-            <div class="flex-stretch"></div>
-            <div class="profile-pic-section">
-                <div class="profile-picture-con">
-                    <div class="profile-img"><img src="images/profile.jpg" alt=""></div>
-                </div>
-                <div class="profile-pic-username">Henry</div>
-            </div>      
-            <div class="profile-info-section">
-                <div class="name-con display-flex">
-                    <div class="info-title">Full Name</div>
-                    <div class="info-input">Henry James
-                    <div class="profile-line1"></div>
-
-                    </div>
-                </div>
-                    <div class="username-con display-flex">
-                    <div class="info-title">Username</div>
-                    <div class="info-input">Henry
-                    <div class="profile-line2"></div>
-
-                    </div>
-
-                </div>
-                <div class="birthday-con display-flex">
-                    <div class="info-title">Birthday</div>
-                    <div class="info-input">April 23rd 1993
-                    <div class="profile-line3"></div>
-                    </div>
-                </div>
-                <div class="website-con display-flex">
-                    <div class="info-title">Website</div>
-                    <div class="info-input">Henry@giantstep.com
-                    <div class="profile-line4"></div>
-                    </div>
-                </div>
-                <div class="bio-con">
-                    <div class="info-title">Bio</div>
-                    <div class="info-input bio-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, fugiat.</div>
-                </div>
-            </div>
+        <div data-role="main" class="display-flex flex-column"></div>
             <div class="flex-stretch"></div>
  
 
@@ -978,6 +932,9 @@
         <div class="flex-stretch"></div>
         </div>
     </section>
+
+
+    <section data-role="page" id="step-profile-page"></section>
 
     <section data-role="page" id="settings-page">
         <header data-role="header">

@@ -61,7 +61,7 @@ function makeStatement($data) {
          return makeQuery($c, "SELECT * FROM `617_track_locations`", $p);
 
       case "user_by_id":
-         return makeQuery($c, "SELECT * FROM `617_track_users` WHERE `id` = ?", $p);
+         return makeQuery($c, "SELECT `id`,`name`,`email`,`img`,`username` FROM `617_track_users` WHERE `id` = ?", $p);
       case "step_by_id":
          return makeQuery($c, "SELECT * FROM `617_track_steps` WHERE `id` = ?", $p);
       case "location_by_id":
@@ -72,12 +72,27 @@ function makeStatement($data) {
       case "locations_by_step_id":
          return makeQuery($c, "SELECT * FROM `617_track_locations` WHERE `step_id` = ?", $p);
 
+
       case "recent_step_locations":
          return makeQuery($c,"SELECT *
             FROM `617_track_steps` a
-            JOIN `617_track_locations` l
+            JOIN (
+               SELECT lg.* 
+               FROM `617_track_locations` lg
+               WHERE lg.id = (
+                  SELECT lt.id
+                  FROM `617_track_locations` lt
+                  WHERE lt.step_id = lg.step_id
+                  ORDER BY lt.date_create DESC
+                  LIMIT 1
+               )
+            ) l
             ON a.id = l.step_id
-         ");
+            WHERE a.user_id = ?
+            ORDER BY l.step_id, l.date_create DESC
+         ",$p);
+
+
 
       case "check_signin":
          return makeQuery($c, "SELECT id from `617_track_users` WHERE `username` = ? AND `password` = md5(?)", $p);

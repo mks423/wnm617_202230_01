@@ -11,7 +11,9 @@ $(() => {
       switch(ui.toPage[0].id) {
          case "home-page": HomePage(); break;
          case "step-page": StepPage(); break;
-         case "profile-page": ProfilePage(); break;
+         case "profile-page": UserProfilePage(); break;
+         case "location-page": MapPage(); break;
+
       }
    })
 
@@ -30,6 +32,15 @@ $(() => {
       checkUserId();
    })
 
+   .on("click", ".js-step-jump", function(e) {
+      try {
+         e.preventDefault();
+         sessionStorage.stepId = $(this).data('id');
+         $.mobile.navigate("#step-profile-page");
+      } catch(e) {
+         throw("No id detected");
+      }
+   })
 
    // ACTIVATE TOOLS
    .on("click", "[data-activate]", function() {
