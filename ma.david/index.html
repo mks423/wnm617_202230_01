@@ -1,1829 +1,534 @@
-<!-- AIzaSyAfvO8Mal69A3Ks-xAYHVtyrOBfWEA1TZw -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIANTSTEP</title>
-    <base href="/aau/wnm617/ma.david/">
-    <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>GIANTSTEP</title>
 
-    <script src="lib/js/jquery-2.2.4.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/signin.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/pages.js"></script>
-    <script src="js/parts.js"></script>
-    <script src="js/maps.js"></script>
-    <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+   <meta name="mobile-web-app-capable" content="yes"> 
+   <link rel="icon" sizes="192x192" href="icon.png"> 
 
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvO8Mal69A3Ks-xAYHVtyrOBfWEA1TZw"
-    defer
-  ></script>
+   <base href="/aau/wnm617/ma.david/">
 
+   <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+   <link rel="stylesheet" href="css/app.css">
+
+   <script src="lib/js/jquery-2.2.4.min.js"></script>
+
+   <script src="js/app.js"></script>
+   <script src="js/signin.js"></script>
+   <script src="js/functions.js"></script>
+   <script src="js/pages.js"></script>
+   <script src="js/parts.js"></script>
+   <script src="js/forms.js"></script>
+   <script src="js/maps.js"></script>
+
+   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+
+   <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvO8Mal69A3Ks-xAYHVtyrOBfWEA1TZw"
+      defer
+    ></script>
 </head>
-<body>    
-    <section data-role="page" id="signin-page">
-        <div data-role="main" class="display-flex flex-column">
-            <div class="flex-stretch"></div>
-            <div class="logo-section">
-                <!-- <img src="images/main_logo.png" alt="" style="width:90vmin; height:90vmin;"> -->
-                <h1>GIANTSTEP</h1>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+   <section data-role="page" id="signin-page">
+      <div data-role="main" class="display-flex flex-column">
+          <div class="flex-stretch"></div>
+          <div class="logo-section">
+              <!-- <img src="images/main_logo.png" alt="" style="width:90vmin; height:90vmin;"> -->
+              <h1>GIANTSTEP</h1>
+          </div>
+          <form id="signin-form" class="form" data-ajax="false">
+              <label for="signin-username" class="form-label">Sign in to Giantstep</label>
+              <div class="form-control">
+                 <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Username">
+              </div>
+              <div class="form-control">
+                 <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Password">
+              </div>
+              <!-- <input type="submit" data-role="none"> -->
+              <div class="form-control">
+                 <button type="submit" class="form-button signin-btn" data-role="none">Sign In</button>
+              </div>
+              <div class="register-section">
+                  <p>Don't have an ID? <a data-role="none" href="#signup-page" class="underline">Create yours now</a></p>
+              </div>
+          </form>
+          <div class="flex-stretch"></div>
+  </section>
+
+   <section data-role="page" id="signup-page">
+      <div data-role="main" class="display-flex flex-column">
+         <div class="flex-stretch"></div>
+         <form id="signup-form" class="form" data-ajax="false">
+            <div class="form-control">
+               <label for="signup-username" class="form-label">Username</label>
+               <input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type your Username">
             </div>
-            <form id="signin-form" class="form" data-ajax="false">
-                <label for="signin-username" class="form-label">Sign in to Giantstep</label>
-                <div class="form-control">
-                   <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Username">
-                </div>
-                <div class="form-control">
-                   <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Password">
-                </div>
-                <!-- <input type="submit" data-role="none"> -->
-                <div class="form-control">
-                   <button type="submit" class="form-button signin-btn" data-role="none">Sign In</button>
-                </div>
-                <div class="register-section">
-                    <p>Don't have an ID? <a data-role="none" href="#signup-page" class="underline">Create yours now</a></p>
-                </div>
+            <div class="form-control">
+               <label for="signup-email" class="form-label">Email</label>
+               <input type="email" id="signup-email" data-role="none" class="form-input" placeholder="Type your Email">
+            </div>
+            <div class="form-control">
+               <label for="signup-password" class="form-label">Password</label>
+               <input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type your Password">
+            </div>
+            <div class="form-control">
+               <label for="signup-password2" class="form-label">Confirm Password</label>
+               <input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Type your Password again">
+            </div>
+            <!-- <input type="submit" data-role="none"> -->
+            <div class="form-control">
+               <button type="submit" class="form-button" data-role="none">Sign Up</button>
+               <!-- <a href="#recent-page" class="form-button">Sign Up</a> -->
+            </div>
+            <div class="form-control" style="text-align:center;font-size:0.8em;">
+               <p>Already have an account? <a href="#signin-page">Sign In!</a></p>
+            </div>
+         </form>
+         <div class="flex-stretch"></div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <section data-role="page" id="recent-page">
+      <div data-role="main">
+         <div class="map"></div>
+         <div class="recent-search">
+            <form class="hotdog flex-stretch" data-ajax="false" id="recent-search">
+               <input type="search" data-role="none" placeholder="Search">
             </form>
+            <div class="flex-none hamburger-icon">
+               <img src="img/icons/hamburger.png" data-activate="#modal-nav-menu">
+            </div>
+         </div>
+         <a href="#choose-animal-page" class="floater bottom right circle-button">&plus;</a>
+         <a href="#choose-location-page" class="floater bottom right circle-button js-location-choose-animal add-main">&plus;</a>
+
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+
+      <div class="modal" id="map-drawer">
+         <div class="modal-back transparent passthrough" data-deactivate="#map-drawer"></div>
+         <div class="modal-drawer top">
+            <div class="modal-body"></div>
+         </div>
+      </div>
+
+
+      <div class="modal" id="modal-nav-menu">
+         <div class="modal-back" data-deactivate="#modal-nav-menu">
+             <div class="nav-con">
+                 <a href="#user-profile-page" class="menu-profile">
+                     <div class="display-flex menu-profile-con">
+                         <div class="menu-profile-icon"><img src="img/icons/profile.png" alt=""></div>
+                         <div class="menu-profile-con">
+                             <div class="menu-profile-title">Profile</div>
+                             <div class="menu-line"></div>
+                         </div>
+                     </div>
+                 </a>
+                 <a href="#settings-page" class="menu-setting">
+                     <div class="display-flex menu-setting-con">
+                         <div class="menu-setting-icon"><img src="img/icons/setting.png" alt=""></div>
+                         <div class="menu-setting-con">
+                             <div class="menu-setting-title">Settings</div>
+                             <div class="menu-line"></div>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+         </div>
+     </div>
+   
+   </section>
+
+
+   <section data-role="page" id="list-page">
+      <div data-role="main">
+         <div class="search-bar header flex-none">
+            <form data-ajax="false" id="list-search-form" class="hotdog dark">
+               <input type="search" data-role="none" placeholder="Search For A Step">
+            </form>
+         </div>
+         <div class="filter-bar header flex-none">
+         </div>
+
+         <ul class="animal-list"></ul>
+         <a href="#animal-add-page" class="floater bottom right circle-button">&plus;</a>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <section data-role="page" id="animal-profile-page">
+      <header data-role="header">
+         <h1></h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#animal-edit-page">Edit</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <div class="animal-profile-top">
+            <a href="#" class="floater bottom right js-animal-delete noclick-children"><img src="img/icons/delete_trans.png" class="icon"></a>
+            <a href="#animal-edit-photo-page" class="floater bottom left"><img src="img/icons/camera_trans.png" class="icon"></a>
+         </div>
+         <div class="animal-profile-nav">
+            <div class="active">Map</div>
+            <div>Description</div>
+         </div>
+         <div class="animal-profile-bottom">
+            <div class="animal-profile-map active">
+               <div class="map map-placeholder"></div>
+               <a href="#choose-location-page" class="floater bottom right circle-button js-location-choose-animal">&plus;</a>
+            </div>
+            <div class="animal-profile-description"></div>
+         </div>
+      </div>
+   </section>
+
+
+   <section data-role="page" id="animal-add-page">
+      <header data-role="header">
+         <h1>New Step</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-animal-add">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <div style="padding:1em">
+            <input type="hidden" id="animal-add-image-url">
+            <label class="imagepicker imagepicker-replace thumbnail" id="animal-add-image-picker">
+               <input type='file' data-role="none">
+            </label>
+         </div>
+         <form id="animal-add-form" class="overscroll" data-ajax="false" style="padding:1em"></form>
+      </div>
+   </section>
+
+
+   <section data-role="page" id="animal-edit-page">
+      <header data-role="header">
+         <h1>Edit Step</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-animal-edit">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="animal-edit-form" class="overscroll" data-ajax="false" style="padding:1em">
+         </form>
+      </div>
+   </section>
+
+   <section data-role="page" id="animal-edit-photo-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-animal-upload">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="animal-edit-photo-image">
+         <label class="imagepicker replace">
+            <input type='file' id="animal-edit-photo-input" data-role="none">
+         </label>
+      </div>
+   </section>
+
+
+
+
+
+
+
+   <section data-role="page" id="choose-animal-page">
+      <header data-role="header">
+         <h1>Choose Step</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-location-page">Next</a></li>
+         </ul>
+      </header>
+      <div data-role="main" style="padding:1em">
+         <input type="hidden" id="location-animal">
+         <input type="hidden" id="location-start" value="-3">
+         <div class="form-control">
+            <a href="#animal-add-page" class="form-button">Add New Step</a>
+         </div>
+         <p>or select one below</p>
+         <div class="form-control" id="choose-animal-input"></div>
+      </div>
+   </section>
+
+   <section data-role="page" id="choose-location-page">
+      <header data-role="header">
+         <h1>Choose Location</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-description-page">Next</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="location-lat">
+         <input type="hidden" id="location-lng">
+         <div class="map"></div>
+      </div>
+   </section>
+
+   <section data-role="page" id="choose-description-page">
+      <header data-role="header">
+         <h1>Describe The Practice</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-location-add">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" style="padding:1em">
+         <textarea id="location-description" class="form-input" data-role="none"></textarea>
+      </div>
+   </section>
+
+
+
+
+
+
+   <section data-role="page" id="user-profile-page">
+      <header data-role="header">
+         <h1>User Profile</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img src="img/icons/back.png" style="margin-top:20px; width:28px; height:28px;" alt=""> </a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#user-settings-page"><img src="img/icons/edit.png" style="margin-top:10px; width:28px; height:28px;" alt=""> </a></li>
+         </ul>
+         </header>
+      <div data-role="main"></div>
+      <!-- <footer data-role="footer" data-template="#footer-template"></footer> -->
+   </section>
+
+   <section data-role="page" id="user-settings-page">
+      <header data-role="header">
+         <h1>User Settings</h1>
+         <ul>
+            <li><a href="#" data-rel="back"><img src="img/icons/back.png" style="margin-top:20px; width:28px; height:28px;" alt=""></a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <ul class="settings-menu">
+            <li><a href="#user-edit-page">Edit User</a></li>
+            <li><a href="#user-password-page">Edit Password</a></li>
+         </ul>
+      </div>
+   </section>
+
+   <section data-role="page" id="user-edit-page">
+      <header data-role="header">
+         <h1>Edit User</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-user-edit">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="user-edit-form" class="overscroll" data-ajax="false" style="padding:1em">
+         </form>
+      </div>
+   </section>
+
+   <section data-role="page" id="user-password-page">
+      <header data-role="header">
+         <h1>Edit User Password</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="user-password-form" class="overscroll fill-parent display-flex flex-column" data-ajax="false" style="padding:1em">
+            <div>
+               <div class="form-control">
+                  <label for="user-password-new" class="form-label">New Password</label>
+                  <input class="form-input" type="password" id="user-password-new" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="user-password-repeat" class="form-label">Repeat Password</label>
+                  <input class="form-input" type="password" id="user-password-repeat" data-role="none">
+               </div>
+            </div>
             <div class="flex-stretch"></div>
-    </section>
-    <section data-role="page" id="signup-page">
-        <div data-role="main" class="signup display-flex flex-column">
-            <div class="flex-stretch"></div>
-            <div class="logo-section">
-                <!-- <img src="images/main_logo.png" alt="" style="width:90vmin; height:90vmin;"> -->
-                <h1>GIANTSTEP</h1>
+            <div>
+               <button class="form-button" type="submit">Submit</button>
             </div>
-            <form id="signup" class="form" data-ajax="false">
-                <label for="signup-name" class="form-label">Create your account</label>
-                <div class="form-control display-flex">
-                    <input type="text" id="signup-first-name" class="form-input signup-name" data-role="none" placeholder="First name">
-                    <input type="text" id="signup-last-name" class="form-input signup-name" data-role="none" placeholder="Last name">
-                </div>
-                <div class="form-control">
-                    <input type="text" id="signup-username" class="form-input" data-role="none" placeholder="Username">
-                </div>
-                <div class="form-control">
-                    <input type="password" id="signup-password" class="form-input" data-role="none" placeholder="Password">
-                </div>
-                <div class="form-control">
-                    <input type="password" id="signup-password-confirm" data-role="none" class="form-input" placeholder="Confirm Password">
-                 </div>
-                <label for="date-of-birth" class="form-label">Date of birth</label>
-                <div class="birthtap">
-                    <div class="form-control">
-                        <select class="birth-select" name="yy" id="year" data-role="none"></select>
-                    </div>
-                    <div class="form-control">
-                        <select class="birth-select" name="mm" id="month" data-role="none"></select> 
-                    </div> 
-                    <div class="form-control">
-                        <select class="birth-select" name="dd" id="day" data-role="none"></select>
-                    </div>
-                </div>
-                <div class="termsandconditions">
-                    <label class="checkbox">
-                        <input type="checkbox" class="signin-checkbox" data-role="none">
-                        <span class="checkmark"></span>
-                    </label>
-                    <div class="agreement"><p>By signing up, you agree to the <a href="#" class="termsandconditions" data-activate="#termsandconditions-popup" data-role="none">Terms of Service</a> and <a href="#" class="privacy" data-activate="#privacy-popup" data-role="none">Privacy Policy.</a></p></div>
-                    </div>
-                    <div class="form-control" data-role="none">
-                        <a href="#home-page" class="form-button signup-btn">Sign Up</a>
-                    </div>
-                    <div class="signup-signin">
-                        <p>Already have an ID? <a href="#signin-page" class="underline">Sign In</a></p>
-                    </div>
-                            
-                    </form>
-                <div class="flex-stretch"></div>
+         </form>
+      </div>
+   </section>
 
-                </div>  
-            </div>
-            <div class="modal" id="termsandconditions-popup">
-                <div class="modal-back" data-deactivate="#termsandcontions-popup">
-                    <div class="modal-popup">
-                        <div class="modal-head">Terms of Service</div>
-                        <div class="modal-body overscroll terms-con" data-ajax="false">
-                            <div class="terms-text"><h1>Your agreement</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nesciunt repellat, ratione nisi expedita, alias officia deleniti reiciendis veritatis placeat optio rem earum? Asperiores sit, quidem atque excepturi repellendus dolores dolorum? Suscipit quas similique quod cum repellendus itaque praesentium, alias tenetur ad tempora doloremque, laboriosam harum quia iste, sit fugiat officia doloribus magni dicta! Itaque, maxime cum minus repellendus voluptas praesentium ut eligendi quas commodi placeat quod, laboriosam inventore dignissimos expedita perferendis obcaecati possimus corrupti! Accusantium quos, incidunt sed, qui iusto, accusamus tempora voluptate hic officia quia nihil quas dignissimos odit placeat sapiente. Voluptate esse, blanditiis ad laudantium porro quis atque nulla eum, minima earum, rem dicta. Nesciunt, consequuntur eos in placeat harum sequi ex aut nam quasi, porro corrupti alias aperiam eligendi itaque ab quidem excepturi non beatae ea blanditiis aspernatur voluptas voluptatibus. Aliquid tempore nostrum, aperiam quis repellendus commodi optio reprehenderit voluptatum vero, laborum unde hic. Aperiam inventore soluta voluptas fugiat magni repudiandae debitis maiores sapiente consectetur dicta error in pariatur minima cum eius ea quos adipisci voluptatem, atque tempora iure harum! Officiis, doloremque! Quisquam fugit illo laborum aliquam? Voluptatibus facilis cum debitis, aperiam minima possimus et facere velit delectus, quae neque ex blanditiis ipsa temporibus iste aut.</p></div>
-                        </div>
-                        <div class="modal-foot">
-                            <div class="modal-foot terms-confirm-btn"  data-deactivate="#termsandconditions-popup">Confirm</div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <div class="modal" id="privacy-popup">
-                <div class="modal-back" data-deactivate="#privacy-popup">
-                    <div class="modal-popup">
-                        <div class="modal-head">Privacy Policy</div>
-                        <div class="modal-body overscroll privacy-con" data-ajax="false">
-                        <div class="terms-text"><h1>Your agreement</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nesciunt repellat, ratione nisi expedita, alias officia deleniti reiciendis veritatis placeat optio rem earum? Asperiores sit, quidem atque excepturi repellendus dolores dolorum? Suscipit quas similique quod cum repellendus itaque praesentium, alias tenetur ad tempora doloremque, laboriosam harum quia iste, sit fugiat officia doloribus magni dicta! Itaque, maxime cum minus repellendus voluptas praesentium ut eligendi quas commodi placeat quod, laboriosam inventore dignissimos expedita perferendis obcaecati possimus corrupti! Accusantium quos, incidunt sed, qui iusto, accusamus tempora voluptate hic officia quia nihil quas dignissimos odit placeat sapiente. Voluptate esse, blanditiis ad laudantium porro quis atque nulla eum, minima earum, rem dicta. Nesciunt, consequuntur eos in placeat harum sequi ex aut nam quasi, porro corrupti alias aperiam eligendi itaque ab quidem excepturi non beatae ea blanditiis aspernatur voluptas voluptatibus. Aliquid tempore nostrum, aperiam quis repellendus commodi optio reprehenderit voluptatum vero, laborum unde hic. Aperiam inventore soluta voluptas fugiat magni repudiandae debitis maiores sapiente consectetur dicta error in pariatur minima cum eius ea quos adipisci voluptatem, atque tempora iure harum! Officiis, doloremque! Quisquam fugit illo laborum aliquam? Voluptatibus facilis cum debitis, aperiam minima possimus et facere velit delectus, quae neque ex blanditiis ipsa temporibus iste aut.</p></div>
-                        </div>
-                        <div class="modal-foot">
-                            <div class="modal-foot privacy-confirm-btn"  data-deactivate="#privacy-popup">Confirm</div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-    </section>
-
-    <section data-role="page" id="home-page">
-        <header data-role="header">
-            <ul>
-                <li class="logo"><h1>GIANTSTEP</h1></li>
-                <li class="flex-stretch"></li>
-                <li class="header-menu-icon" data-activate="#modal-nav-menu"><img src="images/header-menu-icon.png" alt=""></li>
-        </header>
-        <div data-role="main" class="display-flex flex-column">
-            <div class="flex-stretch"></div>
-            <div class="greeting-section">
-                <h1>Good Morning,<br>Henry</h1>
-            </div>
-            <div class="title-section flex-center">
-                <h2 class="title-mypath">My Path</h2>
-                <a href="#addpath-page" data-activate="#modal-add-path"><img class="icon-add" src="images/icon-add.png" alt=""></a>
-            </div>
-        <ul class="step-list">
-        </ul>
-            
-
-        <div class="flex-stretch"></div>
-        <div class="flex-stretch"></div>
-        <div class="flex-stretch"></div>
-        <div class="flex-stretch"></div>
-    </div>
-    
-    <footer data-role="footer" data-template="#footer-template"></footer>
-
-    <div class="modal" id="modal-nav-menu">
-        <div class="modal-back" data-deactivate="#modal-nav-menu">
-            <div class="nav-con">
-                <a href="#profile-page" class="menu-profile">
-                    <div class="display-flex menu-profile-con">
-                        <div class="menu-profile-icon"><img src="images/icon-profile.png" alt=""></div>
-                        <div class="menu-profile-con">
-                            <div class="menu-profile-title">Profile</div>
-                            <div class="menu-line"></div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#settings-page" class="menu-setting">
-                    <div class="display-flex menu-setting-con">
-                        <div class="menu-setting-icon"><img src="images/icon-setting.png" alt=""></div>
-                        <div class="menu-setting-con">
-                            <div class="menu-setting-title">Settings</div>
-                            <div class="menu-line"></div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="modal-add-path">
-        <div class="modal-back" data-deactivate="#modal-add-path">
-            <div class="add-path-con">
-                <div class="add-path-title">Add Path</div>
-                <div class="add-path-name">
-                    <div class="path-name-title">Path name</div>
-                    <input data-role="none" type="text" class="input-path-name" placeholder="Path name">
-                </div>
-                <div class="add-path-description">
-                    <div class="path-description-title">Description</div>
-                    <input data-role="none" type="text" class="input-description" placeholder="Add description">
-                </div>
-                <div class="add-path-icon">
-                    <div class="path-icon-title">Add Icon</div>
-                        <div class="icon-list-con">
-                            <div class="icon-list-row1 display-flex flex-align-center">
-                                <img src="images/icon-dumbbells.png" alt="">
-                                <img src="images/icon-book.png" alt="">
-                                <img src="images/icon-music.png" alt="">
-                                <img src="images/icon-char.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-            <div class="add-path-btn-con display-flex">
-                <div class="cancel-btn" data-deactivate="#modal-add-path">Cancel</div>
-                <div><a class="add-btn" href="#">Add</a></div>
-            </div>
-        </div>
-    </div>
-    </section>
-
-    <!-- <section data-role="page" id="addpath-page">
-        <header data-role="header">
-            <h1>Add Path</h1>
-            <ul>
-                <li><a href="#" data-rel="back"><img src="images/icon-back.png" alt=""></a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#home-page">Add</a></li>
-            </ul>
-        </header>
-        <div data-role="main">
-            <form id="addpath-form" class="form">
-                <div class="form-control">
-                    <label for="add-path" class="form-label">Path name</label>
-                    <input type="type" id="add-path" class="form-input" placeholder="Path Name">
-                </div>
-                <div class="form-control">
-                    <label for="add-label" class="form-label">Label Name</label>
-                    <input type="type" id="add-label" class="form-input" placeholder="Add a Label">
-                </div>
-                <div class="form-control">
-                    <label for="add-description" class="form-label">Description</label>
-                    <input type="type" id="add-description" class="form-input" placeholder="Add a Description">
-                </div>
-                </form>
-        </div>
-    </section> -->
-
-    <section data-role="page" id="step-page">
-        <header data-role="header">
-            <h1>My Steps</h1>
-            <ul>
-                <!-- <li><a href="#" data-rel="back">Back</a></li> -->
-                <li class="flex-stretch"></li>
-                <li><a href="#addstep-page"><img class=icon-add src="images/icon-add.png" alt=""></a></li>
-            </ul>
-        </header>
-            <div data-role="main" class="mysteps">
-                
-                <div class="feed-section">
-                    <div class="feed-title flex-center">
-                        <div class="stepnum-con">
-                            <div>
-                                <p>Step #3 <span class="mystep-pathname">Piano practice</span></p>
-                            </div>
-                            <a href="#location-page">
-                                <div class="location-con display-flex">
-                                    <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                                </div> 
-                            </a>   
-                        </div>
-                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                    </div>
-                    <div class="feed-img">
-                        <img src="images/piano.jpg" alt=""></a>
-                    </div>
-                    <div class="property-section">
-                        <div class="property-time">
-                            <div>
-                                <h4>Time</h4>
-                            </div>
-                            <div class="time-num-con display-flex flex-evenly">
-                                <div class="start-time">
-                                    <div><h5>Start time</h5></div>
-                                    <div class="display-flex">
-                                        <span class="time-num">2:00</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="end-time">
-                                    <div>
-                                        <h5>End time</h5>
-                                    </div>
-                                    <div class="display-flex">
-                                        <span class="time-num">4:20</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="total">
-                                    <div>
-                                        <h5>Total</h5>
-                                    </div>
-                                    <div class="display-flex">
-                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="property-progress">
-                            <div>
-                                <h4>Progress</h4>
-                            </div>
-                            <div class="progress-bar display-flex">
-                                <span class="bar"></span>
-                                <span class="stage-1"></span>
-                                <span class="stage-2"></span>
-                                <span class="stage-3"></span>
-                                <span class="better-btn"><h4>Better</h4></span>
-                                <span class="stage-5"></span>
-                            </div>
-                        </div>
-                        <div class="property-comment">
-                            <div>
-                                <h4>Comment</h4>
-                            </div>
-                            <div class="comment-box">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="feed-section">
-                    <div class="feed-title flex-center">
-                        <div class="stepnum-con">
-                            <div>
-                                <p>Step #3 <span class="mystep-pathname">Workout</span></p>
-                            </div>
-                            <a href="#location-page">
-                            <div class="location-con display-flex">
-                                <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                            </div>   
-                            </a> 
-                        </div>
-                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                    </div>
-                    <div class="feed-img">
-                        <img src="images/workout.jpg" alt=""></a>
-                    </div>
-                    <div class="property-section">
-                        <div class="property-time">
-                            <div>
-                                <h4>Time</h4>
-                            </div>
-                            <div class="time-num-con display-flex flex-evenly">
-                                <div class="start-time">
-                                    <div><h5>Start time</h5></div>
-                                    <div class="display-flex">
-                                        <span class="time-num">2:00</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="end-time">
-                                    <div>
-                                        <h5>End time</h5>
-                                    </div>
-                                    <div class="display-flex">
-                                        <span class="time-num">4:20</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="total">
-                                    <div>
-                                        <h5>Total</h5>
-                                    </div>
-                                    <div class="display-flex">
-                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="property-progress">
-                            <div>
-                                <h4>Progress</h4>
-                            </div>
-                            <div class="progress-bar display-flex">
-                                <span class="bar"></span>
-                                <span class="stage-1"></span>
-                                <span class="stage-2"></span>
-                                <span class="stage-3"></span>
-                                <span class="better-btn"><h4>Better</h4></span>
-                                <span class="stage-5"></span>
-                            </div>
-                        </div>
-                        <div class="property-comment">
-                            <div>
-                                <h4>Comment</h4>
-                            </div>
-                            <div class="comment-box">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+   <section data-role="page" id="user-edit-photo-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-user-upload">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="user-edit-photo-image">
+         <label class="imagepicker replace">
+            <input type='file' id="user-edit-photo-input" data-role="none">
+         </label>
+      </div>
+   </section>
 
 
 
-                <div class="feed-section">
-                    <div class="feed-title flex-center">
-                        <div class="stepnum-con">
-                            <div>
-                                <p>Step #3 <span class="mystep-pathname">Reading</span></p>
-                            </div>
-                            <a href="#location-page">
-                            <div class="location-con display-flex">
-                                <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                            </div>    
-                            </a>
-                        </div>
-                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                    </div>
-                    <div class="feed-img">
-                        <img src="images/reading.jpg" alt=""></a>
-                    </div>
-                    <div class="property-section">
-                        <div class="property-time">
-                            <div>
-                                <h4>Time</h4>
-                            </div>
-                            <div class="time-num-con display-flex flex-evenly">
-                                <div class="start-time">
-                                    <div><h5>Start time</h5></div>
-                                    <div class="display-flex">
-                                        <span class="time-num">2:00</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="end-time">
-                                    <div>
-                                        <h5>End time</h5>
-                                    </div>
-                                    <div class="display-flex">
-                                        <span class="time-num">4:20</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="total">
-                                    <div>
-                                        <h5>Total</h5>
-                                    </div>
-                                    <div class="display-flex">
-                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="property-progress">
-                            <div>
-                                <h4>Progress</h4>
-                            </div>
-                            <div class="progress-bar display-flex">
-                                <span class="bar"></span>
-                                <span class="stage-1"></span>
-                                <span class="stage-2"></span>
-                                <span class="stage-3"></span>
-                                <span class="better-btn"><h4>Better</h4></span>
-                                <span class="stage-5"></span>
-                            </div>
-                        </div>
-                        <div class="property-comment">
-                            <div>
-                                <h4>Comment</h4>
-                            </div>
-                            <div class="comment-box">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            
-
-                <div class="feed-section">
-                    <div class="feed-title flex-center">
-                        <div class="stepnum-con">
-                            <div>
-                                <p>Step #3 <span class="mystep-pathname">Lettering Design</span></p>
-                            </div>
-                            <a href="#location-page">
-                            <div class="location-con display-flex">
-                                <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                            </div>  
-                            </a>  
-                        </div>
-                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                    </div>
-                    <div class="feed-img">
-                        <img src="images/lettering.jpg" alt=""></a>
-                    </div>
-                    <div class="property-section">
-                        <div class="property-time">
-                            <div>
-                                <h4>Time</h4>
-                            </div>
-                            <div class="time-num-con display-flex flex-evenly">
-                                <div class="start-time">
-                                    <div><h5>Start time</h5></div>
-                                    <div class="display-flex">
-                                        <span class="time-num">2:00</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="end-time">
-                                    <div>
-                                        <h5>End time</h5>
-                                    </div>
-                                    <div class="display-flex">
-                                        <span class="time-num">4:20</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="total">
-                                    <div>
-                                        <h5>Total</h5>
-                                    </div>
-                                    <div class="display-flex">
-                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <div class="property-progress">
-                            <div>
-                                <h4>Progress</h4>
-                            </div>
-                            <div class="progress-bar display-flex">
-                                <span class="bar"></span>
-                                <span class="stage-1"></span>
-                                <span class="stage-2"></span>
-                                <span class="stage-3"></span>
-                                <span class="better-btn"><h4>Better</h4></span>
-                                <span class="stage-5"></span>
-                            </div>
-                        </div>
-                        <div class="property-comment">
-                            <div>
-                                <h4>Comment</h4>
-                            </div>
-                            <div class="comment-box">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <footer data-role="footer" data-template="#footer-template"></footer>
-    </section>
-
-    <section data-role="page" id="location-page">  
-        <div data-role="main">
-            <div class="map"></div>
-            <div class="location-search display-flex">
-                <li><a href="#" data-rel="back"><img src="images/icon-back.png" class="icon-back" alt=""></a></li>
-                <form class="hotdog flex-stretch" data-ajax="false" id="location-search">
-                    <input type="search" data-role="none" placeholder="Search">
-                </form>
-           </div>
-        </div>
-     </section>
-
-
-
-    <section data-role="page" id="editstep-page">
-            <header data-role="header">
-                <h1>Edit Step</h1>
-                <ul>
-                    <li><a href="#" data-rel="back"><img src="images/icon-back.png" class="icon-back" alt=""></a></li>
-                    <li class="flex-stretch"></li>
-                </ul>
-            </header>
-            <div data-role="main" class="mysteps">
-                <div class="flex-stretch"></div>
-                <div class="feed-section">
-                    <div class="feed-title flex-center">
-                        <div class="stepnum-con">
-                        <p>Step #4</p>
-                        <a href="#location-page">
-                        <div class="location-con display-flex">
-                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Add Location</h6>
-                        </div>  
-                        </a>  
-                        </div>
-                    </div>
-                    <div class="feed-img"><img src="images/piano.jpg" alt=""></a></div>
-                    <div class="add-path-category">
-                        <div><h4>Path</h4></div>
-                            <div class="path-category display-flex">
-                                <div>
-                                    <select data-role="none" class="selet-path-category" name="path">
-                                        <option value="piano practice">Piano Practice</option>
-                                        <option value="workout">Workout</option>
-                                        <option value="reading">Reading</option>
-                                        <option value="lettering design">Lettering Design</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>                 
-                    <div class="add-time-con display-flex">
-                        <div class="add-time display-flex">
-                            <div class="add-start-time">
-                                <div><h4>Start time</h4></div>
-                                <div class="time-select display-flex">
-                                    <div>
-                                        <select data-role="none" class="add-select-time" name="Time">
-                                            <option value="1">1</option></div>
-                                            <option value="2">2</option></div>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select data-role="none" class="add-select-time" name="Time">
-                                            <option value="1">00</option></div>
-                                            <option value="2">10</option></div>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select data-role="none" class="add-select-ampm" name="AM">
-                                            <option value="am">AM</option>
-                                            <option value="pm">PM</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-                        <div class="add-end-time">
-                            <div><h4>End time</h4></div>
-                                <div class="time-select display-flex">
-                                    <div>
-                                        <select data-role="none" class="add-select-time" name="Time">
-                                            <option value="1">1</option></div>
-                                            <option value="2">2</option></div>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select data-role="none" class="add-select-time" name="Time">
-                                            <option value="1">00</option></div>
-                                            <option value="2">10</option></div>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select data-role="none" class="add-select-ampm" name="AM">
-                                            <option value="am">AM</option>
-                                            <option value="pm">PM</option>
-                                        </select>
-                                    </div>
-                                </div>
-                        </div>  
-                    </div>
-    
-    
-                        <div class="property-progress edit-progress">
-                            <h4>Progress</h4>
-                            <div class="progress-select-bar display-flex">
-                                <div class="progress-btn-1st"><h4>Worse</h4></div>
-                                <div class="progress-btn-2nd"><h4>Poor</h4></div>
-                                <div class="progress-btn-3rd"><h4>Nuetral</h4></div>
-                                <div class="progress-btn-4th btn-selected"><h4>Good</h4></div>
-                                <div class="progress-btn-5th"><h4>Better</h4></div>
-                          
-                            </div>
-                        </div>
-                        <div class="property-comment edit-comment">
-                            <h4>Comment</h4>
-                            <div>
-                                <input class="comment-box" data-role="none" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, sequi?"></input>
-                            </div>
-                        </div>
-                        <div class="form-control" data-role="none">
-                            <a href="#step1-page" class="form-button addstep-btn" data-role="none">Edit</a>
-                        </div>
-                    </div>
-
-    </section>
-
-    <section data-role="page" id="addstep-page">
-        <header data-role="header">
-            <h1>Add Step</h1>
-            <ul>
-                <li><a href="#" data-rel="back"><img src="images/icon-back.png" class="icon-back" alt=""></a></li>
-                <li class="flex-stretch"></li>
-            </ul>
-        </header>
-        <div data-role="main" class="addstep display-flex flex-column">
-            <div class="flex-stretch"></div>
-            <div class="feed-section">
-                <div class="feed-title flex-center">
-                    <div class="stepnum-con">
-                        <p>Step #4</p>
-                        <a href="#location-page">
-                        <div class="location-con display-flex">
-                            <img src="images/icon-location.png" alt="" class="icon-location"><h6>Add Location</h6>
-                        </div>   
-                        </a> 
-                    </div>
-                </div>
-                <div class="add-img"><img src="images/upload-picture.png" alt=""><p>Upload Image</p></a></div>
-                <div class="display-flex">
-                    <div class="add-path-category">
-                        <div><h4>Path</h4></div>
-                            <div class="path-category display-flex">
-                                <div>
-                                    <select data-role="none" class="selet-path-category" name="path">
-                                        <option value="piano practice">Piano Practice</option>
-                                        <option value="workout">Workout</option>
-                                        <option value="reading">Reading</option>
-                                        <option value="lettering design">Lettering Design</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="add-time display-flex">
-                        <div class="add-start-time">
-                        <div><h4>Start time</h4></div>
-                            <div class="time-select display-flex">
-                                <div>
-                                    <select data-role="none" class="add-select-time" name="Time">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <select data-role="none" class="add-select-time" name="Time">
-                                        <option value="1">00</option>
-                                        <option value="2">10</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <select data-role="none" class="add-select-ampm" name="AM">
-                                        <option value="am">AM</option>
-                                        <option value="pm">PM</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="add-end-time">
-                        <div><h4>End time</h4></div>
-                            <div class="time-select display-flex">
-                                <div>
-                                    <select data-role="none" class="add-select-time" name="Time">
-                                        <option value="1">1</option></div>
-                                        <option value="2">2</option></div>
-                                    </select>
-                                </div>
-                                <div>
-                                    <select data-role="none" class="add-select-time" name="Time">
-                                        <option value="1">00</option></div>
-                                        <option value="2">10</option></div>
-                                    </select>
-                                </div>
-                                <div>
-                                    <select data-role="none" class="add-select-ampm" name="AM">
-                                        <option value="am">AM</option>
-                                        <option value="pm">PM</option>
-                                    </select>
-                                </div>
-                            </div>
-                    </div>  
-                </div>
-
-
-                    <div class="property-progress">
-                        <h4>Progress</h4>
-                        <div class="progress-select-bar display-flex">
-                            <div class="progress-btn-1st"><h4>Worse</h4></div>
-                            <div class="progress-btn-2nd"><h4>Poor</h4></div>
-                            <div class="progress-btn-3rd"><h4>Nuetral</h4></div>
-                            <div class="progress-btn-4th btn-selected"><h4>Good</h4></div>
-                            <div class="progress-btn-5th"><h4>Better</h4></div>
-                      
-                        </div>
-                    </div>
-                    <div class="property-comment">
-                        <h4>Comment</h4>
-                        <div class="comment-box-con">
-                            <input class="comment-box" data-role="none" type="text" placeholder="Add comments">
-                        </div>
-                    </div>
-                    <div class="form-control" data-role="none">
-                        <a href="#step1-page" class="form-button addstep-btn" data-role="none">Add</a>
-                    </div>
-                 </div>
-            <div class="flex-stretch"></div>
-
-    </section>
-
-    <!-- <section data-role="page" id="analysis-page">
-        <header data-role="header">
-            <h1>Analysis</h1>
-            <ul>
-                <li class="flex-stretch"></li>
-            </ul>
-        </header>
-        <div data-role="main" class="analysis">
-            <div class="title-line flex-center">
-            <h2 class="title-mypath">Steps</h2>
-            </div>
-            <div class="analysis1-wrapper">
-                <div class="path1">
-                <p><a href="#step1-page">Piano Practice</a></p>
-                <div class="step-bar1"></div>
-                </div>
-                <div class="path2">
-                <p><a href="#step2-page">Workout</a></p>
-                <div class="step-bar2"></div>
-                </div>
-                <div class="path3">
-                <p><a href="#step3-page">Reading</a></p>
-                <div class="step-bar3"></div>
-                </div>
-                <div class="path4">
-                <p><a href="#step4-page">Lettering Design</a></p>
-                <div class="step-bar4"></div>
-                </div>
-            </div>
-            <div class="title-line flex-center">
-                <h2 class="title-mypath">Duration</h2>
-                </div>
-            <div class="analysis1-wrapper">
-                <div class="path1">
-                <p><a href="#step1-page">Piano Practice</a></p>
-                <div class="step-bar1"></div>
-                </div>
-                <div class="path2">
-                <p><a href="#step2-page">Workout</a></p>
-                <div class="step-bar2"></div>
-                </div>
-                <div class="path3">
-                <p><a href="#step3-page">Reading</a></p>
-                <div class="step-bar3"></div>
-                </div>
-                <div class="path4">
-                <p><a href="#step4-page">Lettering Design</a></p>
-                <div class="step-bar4"></div>
-                </div>
-            </div>
-            <div class="title-line flex-center">
-                <h2 class="title-mypath">Improvement</h2>
-                </div>
-                <div class="analysis1-wrapper">
-                    <div class="path1">
-                    <p><a href="#step1-page">Piano Practice</a></p>
-                    <div class="step-bar1"></div>
-                    </div>
-                    <div class="path2">
-                    <p><a href="#step2-page">Workout</a></p>
-                    <div class="step-bar2"></div>
-                    </div>
-                    <div class="path3">
-                    <p><a href="#step3-page">Reading</a></p>
-                    <div class="step-bar3"></div>
-                    </div>
-                    <div class="path4">
-                    <p><a href="#step4-page">Lettering Design</a></p>
-                    <div class="step-bar4"></div>
-                    </div>
-                </div>
-        </div>
-        <footer data-role="footer" data-template="#footer-template"></footer>
-
-    </section> -->
-
-    <section data-role="page" id="profile-page">
-        <header data-role="header">
-            <h1>Profile</h1>
-            <ul>
-                <li><a href="#home-page"><img class="icon-add" src="images/icon-back.png" alt=""></a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#edit-profile-page"><img class="icon-add" src="images/icon-edit-edit.png" alt=""></a></li>
-            </ul>
-        </header>
-        <div data-role="main" class="display-flex flex-column"></div>
-            <div class="flex-stretch"></div>
+   <section data-role="page" id="settings-page">
+      <header data-role="header">
+          <h1>Settings</h1>
+          <ul>
+              <li><a href="#" data-rel="back"><img class="icon-back" src="img/icons/back.png" alt=""></a></li>
+              <li class="flex-stretch"></li>
+          </ul>
+      </header>
+          <div data-role="main" class="settings">
+              <div class="settings-list-con">
+                  <a href="#account-page"><div class="account-con display-flex">
+                      <div class="account-icon"><img class="icon-add" src="img/icons/account.png" alt=""></div>
+                      <div class="account-title-con">
+                          <div class="settings-title">Account</div>
+                          <div class="settings-line"></div>
+                      </div>
+                  </div>
+                  </a>
+                  <a href="#" data-activate="#modal-about-popup">
+                  <div class="about-con display-flex">
+                      <div class="about-icon"><img class="icon-add" src="img/icons/about.png" alt=""></div>
+                      <div class="about-title-con">
+                          <div class="settings-title">About</div>
+                          <div class="settings-line"></div>
+                      </div>
+                  </div>
+                  </a>
+              </div>       
+          </div>
+      </section>
  
 
-        </div>
-    </section>
 
-    <section data-role="page" id="edit-profile-page">
-        <header data-role="header">
-            <h1>Edit Profile</h1>
-            <ul>
-                <li><a href="#" data-rel="back"><img class="icon-add" src="images/icon-back.png" alt=""></a></li>
-                <li class="flex-stretch"></li>
-            </ul>
-        </header>
-        <div data-role="main" class="display-flex flex-column">
-            <div class="flex-stretch"></div>
-                <div class="profile-pic-section">
-                    <div class="profile-picture-con">
-                        <div class="profile-img"><img src="images/profile.jpg" alt=""></div>
-                    </div>
-                <div class="change-profile-photo">Change Profile Photo</div>
-            </div>      
-            <div class="profile-info-section">
-                <div class="name-con display-flex">
-                    <div class="edit-info-title">Full Name</div>
-                    <input class="info-input edit-profile-textbox" type="text" data-role="none" placeholder="Henry James">
-                </div>
-                <div class="username-con display-flex">
-                    <div class="edit-info-title">Username</div>
-                    <input class="info-input edit-profile-textbox" type="text" data-role="none" placeholder="Henry">
-                </div>
-                <div class="birthday-con display-flex">
-                    <div class="edit-info-title">Birthday</div>
-                    <div class="edit-birthtap">
-                        <select class="edit-birth-select" name="yy" id="year" data-role="none"></select>
-                        <select class="edit-birth-select" name="mm" id="month" data-role="none"></select> 
-                        <select class="edit-birth-select" name="dd" id="day" data-role="none"></select>
-                    </div>                    
-                </div>
-                <div class="website-con display-flex">
-                    <div  class="edit-info-title" class="info-title">Website</div>
-                    <input class="info-input edit-profile-textbox" type="text" data-role="none" placeholder="Henry@giantstep.com">
-                </div>
-                <div class="bio-con display-flex">
-                    <div class="edit-info-title">Bio</div>
-                    <input class="edit-profile-textbox bio-textbox" type="text" data-role="none">
-                </div>
-            <div class="form-control">
-                <a href="#profile-page" class="form-button addstep-btn" data-role="none">Edit</a>
-            </div>
-        </div>
-        <div class="flex-stretch"></div>
-        </div>
-    </section>
+      <div class="modal" id="modal-confirm-logout">
+         <div class="modal-back delete-confirm-text" data-deactivate="#modal-confirm-logout">
+         <div class="delete-confirm-con">
+             <div class="text-box">Are you sure you want to logout?</div>
+             <div class="respond-con display-flex">
+                 <div class="cancel-delete" data-deactivate="#modal-confirm-logout">No</div>
+                 <a href="#signin-page"><div class="delete-delete" data-deactivate="modal-confirm-logout">Yes</div></a>
+             </div>
+         </div>
+         </div>
+     </div>
 
+     <div class="modal" id="modal-about-popup">
+         <div class="modal-back" data-deactivate="#modal-about-popup">
+             <div class="modal-popup">
+                 <div class="modal-head">About</div>
+                 <div class="modal-body overscroll terms-con" data-ajax="false">
+                     <div class="terms-text"><h1>Giantstep</h1><p>Designed by David Ma</p></div>
+                 </div>
+                 <div class="modal-foot">
+                     <div class="modal-foot terms-confirm-btn"  data-deactivate="#modal-about-popup">Confirm</div>
+                 </div>
+             </div>
+         </div>
+     </div> 
 
-    <section data-role="page" id="step-profile-page"></section>
+     <section data-role="page" id="account-page">
+      <header data-role="header">
+          <h1>Account</h1>
+          <ul>
+              <li><a href="#" data-rel="back"><img class="icon-back" src="img/icons/back.png" alt=""></a></li>
+              <li class="flex-stretch"></li>
+          </ul>
+      </header>
+          <div data-role="main" class="settings">
+              <div class="settings-list-con">
+                  <a href="#" data-activate="#modal-confirm-logout">
+                  <div class="account-con display-flex">
+                      <div class="account-icon"><img class="icon-add" src="img/icons/logout.png" alt=""></div>
+                      <div class="account-title-con">
+                          <div class="settings-title">Logout</div>
+                          <div class="settings-line"></div>
+                      </div>
+                  </div>
+                  </a> 
+              </div>   
+          </div>
+      </section>
 
-    <section data-role="page" id="settings-page">
-        <header data-role="header">
-            <h1>Settings</h1>
-            <ul>
-                <li><a href="#" data-rel="back"><img class="icon-back" src="images/icon-back.png" alt=""></a></li>
-                <li class="flex-stretch"></li>
-            </ul>
-        </header>
-            <div data-role="main" class="settings">
-                <div class="settings-list-con">
-                    <a href="#account-page"><div class="account-con display-flex">
-                        <div class="account-icon"><img class="icon-add" src="images/icon-account.png" alt=""></div>
-                        <div class="account-title-con">
-                            <div class="settings-title">Account</div>
-                            <div class="settings-line"></div>
-                        </div>
-                    </div>
-                    </a>
-                    <a href="#" data-activate="#modal-about-popup">
-                    <div class="about-con display-flex">
-                        <div class="about-icon"><img class="icon-add" src="images/icon-about.png" alt=""></div>
-                        <div class="about-title-con">
-                            <div class="settings-title">About</div>
-                            <div class="settings-line"></div>
-                        </div>
-                    </div>
-                    </a>
-                </div>       
-            </div>
-        </section>
-
-
-        <section data-role="page" id="account-page">
-            <header data-role="header">
-                <h1>Account</h1>
-                <ul>
-                    <li><a href="#" data-rel="back"><img class="icon-back" src="images/icon-back.png" alt=""></a></li>
-                    <li class="flex-stretch"></li>
-                </ul>
-            </header>
-                <div data-role="main" class="settings">
-                    <div class="settings-list-con">
-                        <a href="#" data-activate="#modal-confirm-logout">
-                        <div class="account-con display-flex">
-                            <div class="account-icon"><img class="icon-add" src="images/icon-logout.png" alt=""></div>
-                            <div class="account-title-con">
-                                <div class="settings-title">Logout</div>
-                                <div class="settings-line"></div>
-                            </div>
-                        </div>
-                        </a> 
-                    </div>   
-                </div>
-            </section>
-
-
-            <div class="modal" id="modal-confirm-logout">
-                <div class="modal-back delete-confirm-text" data-deactivate="#modal-confirm-logout">
-                <div class="delete-confirm-con">
-                    <div class="text-box">Are you sure you want to logout?</div>
-                    <div class="respond-con display-flex">
-                        <div class="cancel-delete" data-deactivate="#modal-confirm-logout">No</div>
-                        <a href="#signin-page"><div class="delete-delete" data-deactivate="modal-confirm-logout">Yes</div></a>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <div class="modal" id="modal-about-popup">
-                <div class="modal-back" data-deactivate="#modal-about-popup">
-                    <div class="modal-popup">
-                        <div class="modal-head">About</div>
-                        <div class="modal-body overscroll terms-con" data-ajax="false">
-                            <div class="terms-text"><h1>Giantstep</h1><p>Designed by David Ma</p></div>
-                        </div>
-                        <div class="modal-foot">
-                            <div class="modal-foot terms-confirm-btn"  data-deactivate="#modal-about-popup">Confirm</div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        
-
-    <section data-role="page" id="step1-page">
-        <header data-role="header">
-            <h1>Piano Practice</h1>
-            <ul>
-                <li><a href="#" data-rel="back"><img class="icon-back"src="images/icon-back.png" alt=""></a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#addstep-page"><img class="icon-add" src="images/icon-add.png" alt=""></a></li>
-            </ul>
-        </header>
-        <div class="step-info-con display-flex">              
-        <div class="flex-evenly step-inform-section">
-            <div class="steps-con display-flex">
-            <h2>3</h2>
-            <p>Steps</p>
-            </div>  
-            <div class="time-con display-flex">
-            <h2>6</h2>
-            <p>Hours</p>
-            </div>      
-        </div>
-        </div>
-        <div data-role="main" class="mysteps">
-                <div class="feed-section">
-                    <div class="feed-title flex-center">
-                        <div class="stepnum-con">
-                        <p>Step #3</p>
-                        <a href="#location-page">
-                        <div class="location-con display-flex">
-                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                        </div>  
-                        </a>  
-                        </div>
-                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                    </div>
-                    <div class="feed-img"><img src="images/piano.jpg" alt=""></a></div>
-                    <div class="property-section">
-                        <div class="property-time">
-                            <h4>Time</h4>
-                            <div class="time-num-con display-flex flex-evenly">
-                                <div class="start-time">
-                                    <h5>Start time</h5>
-                                    <div class="display-flex">
-                                        <span class="time-num">2:00</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="end-time">
-                                    <h5>End time</h5>
-                                    <div class="display-flex">
-                                        <span class="time-num">4:20</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="total">
-                                    <h5>Total</h5>
-                                    <div class="display-flex">
-                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="property-progress">
-                            <h4>Progress</h4>
-                            <div class="progress-bar display-flex">
-                                <span class="bar"></span>
-                                <span class="stage-1"></span>
-                                <span class="stage-2"></span>
-                                <span class="stage-3"></span>
-                                <span class="better-btn"><h4>Better</h4></span>
-                                <span class="stage-5"></span>
-                            </div>
-                        </div>
-                        <div class="property-comment">
-                            <h4>Comment</h4>
-                            <div class="comment-box">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                            </div>
-                        </div>
-
-                        <div class="feed-section">
-                            <div class="feed-title flex-center">
-                                <div class="stepnum-con">
-                                <p>Step #2</p>
-                                <a href="#location-page">
-                                <div class="location-con display-flex">
-                                <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                                </div>
-                                </a>    
-                                </div>
-                                <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                            </div>
-                            <div class="feed-img"><img src="images/piano.jpg" alt=""></a></div>
-                            <div class="property-section">
-                                <div class="property-time">
-                                    <h4>Time</h4>
-                                    <div class="time-num-con display-flex flex-evenly">
-                                        <div class="start-time">
-                                            <h5>Start time</h5>
-                                            <div class="display-flex">
-                                                <span class="time-num">2:00</span>
-                                                <span class="ampm">PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="end-time">
-                                            <h5>End time</h5>
-                                            <div class="display-flex">
-                                                <span class="time-num">4:20</span>
-                                                <span class="ampm">PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="total">
-                                            <h5>Total</h5>
-                                            <div class="display-flex">
-                                                <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="property-progress">
-                                    <h4>Progress</h4>
-                                    <div class="progress-bar display-flex">
-                                        <span class="bar"></span>
-                                        <span class="stage-1"></span>
-                                        <span class="stage-2"></span>
-                                        <span class="stage-3"></span>
-                                        <span class="better-btn"><h4>Better</h4></span>
-                                        <span class="stage-5"></span>
-                                    </div>
-                                </div>
-                                <div class="property-comment">
-                                    <h4>Comment</h4>
-                                    <div class="comment-box">
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                                    </div>
-                                </div>
-                                <div class="feed-section">
-                                    <div class="feed-title flex-center">
-                                        <div class="stepnum-con">
-                                        <p>Step #1</p>
-                                        <a href="#location-page">
-                                        <div class="location-con display-flex">
-                                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                                        </div> 
-                                        </a>   
-                                        </div>
-                                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                                    </div>
-                                    <div class="feed-img"><img src="images/piano.jpg" alt=""></a></div>
-                                    <div class="property-section">
-                                        <div class="property-time">
-                                            <h4>Time</h4>
-                                            <div class="time-num-con display-flex flex-evenly">
-                                                <div class="start-time">
-                                                    <h5>Start time</h5>
-                                                    <div class="display-flex">
-                                                        <span class="time-num">2:00</span>
-                                                        <span class="ampm">PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="end-time">
-                                                    <h5>End time</h5>
-                                                    <div class="display-flex">
-                                                        <span class="time-num">4:20</span>
-                                                        <span class="ampm">PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="total">
-                                                    <h5>Total</h5>
-                                                    <div class="display-flex">
-                                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="property-progress">
-                                            <h4>Progress</h4>
-                                            <div class="progress-bar display-flex">
-                                                <span class="bar"></span>
-                                                <span class="stage-1"></span>
-                                                <span class="stage-2"></span>
-                                                <span class="stage-3"></span>
-                                                <span class="better-btn"><h4>Better</h4></span>
-                                                <span class="stage-5"></span>
-                                            </div>
-                                        </div>
-                                        <div class="property-comment">
-                                            <h4>Comment</h4>
-                                            <div class="comment-box">
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                                            </div>
-                                        </div>
-    </section>
-
-    <section data-role="page" id="step2-page">
-        <header data-role="header">
-            <h1>Workout</h1>
-            <ul>
-                <li><a href="#" data-rel="back"><img class="icon-back"src="images/icon-back.png" alt=""></a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#addstep-page"><img class="icon-add" src="images/icon-add.png" alt=""></a></li>
-            </ul>
-        </header>
-        <div class="step-info-con display-flex">              
-        <div class="flex-evenly step-inform-section">
-            <div class="steps-con display-flex">
-            <h2>3</h2>
-            <p>Steps</p>
-            </div>  
-            <div class="time-con display-flex">
-            <h2>6</h2>
-            <p>Hours</p>
-            </div>      
-        </div>
-        </div>
-        <div data-role="main" class="mysteps">
-                <div class="feed-section">
-                    <div class="feed-title flex-center">
-                        <div class="stepnum-con">
-                        <p>Step #3</p>
-                        <a href="#location-page">
-                        <div class="location-con display-flex">
-                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                        </div>    
-                        </a>
-                        </div>
-                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                    </div>
-                    <div class="feed-img"><img src="images/workout.jpg" alt=""></a></div>
-                    <div class="property-section">
-                        <div class="property-time">
-                            <h4>Time</h4>
-                            <div class="time-num-con display-flex flex-evenly">
-                                <div class="start-time">
-                                    <h5>Start time</h5>
-                                    <div class="display-flex">
-                                        <span class="time-num">2:00</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="end-time">
-                                    <h5>End time</h5>
-                                    <div class="display-flex">
-                                        <span class="time-num">4:20</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="total">
-                                    <h5>Total</h5>
-                                    <div class="display-flex">
-                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="property-progress">
-                            <h4>Progress</h4>
-                            <div class="progress-bar display-flex">
-                                <span class="bar"></span>
-                                <span class="stage-1"></span>
-                                <span class="stage-2"></span>
-                                <span class="stage-3"></span>
-                                <span class="better-btn"><h4>Better</h4></span>
-                                <span class="stage-5"></span>
-                            </div>
-                        </div>
-                        <div class="property-comment">
-                            <h4>Comment</h4>
-                            <div class="comment-box">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                            </div>
-                        </div>
-
-                        <div class="feed-section">
-                            <div class="feed-title flex-center">
-                                <div class="stepnum-con">
-                                <p>Step #2</p>
-                                <a href="#location-page">
-                                <div class="location-con display-flex">
-                                <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                                </div>   
-                                </a> 
-                                </div>
-                                <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                            </div>
-                            <div class="feed-img"><img src="images/workout.jpg" alt=""></a></div>
-                            <div class="property-section">
-                                <div class="property-time">
-                                    <h4>Time</h4>
-                                    <div class="time-num-con display-flex flex-evenly">
-                                        <div class="start-time">
-                                            <h5>Start time</h5>
-                                            <div class="display-flex">
-                                                <span class="time-num">2:00</span>
-                                                <span class="ampm">PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="end-time">
-                                            <h5>End time</h5>
-                                            <div class="display-flex">
-                                                <span class="time-num">4:20</span>
-                                                <span class="ampm">PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="total">
-                                            <h5>Total</h5>
-                                            <div class="display-flex">
-                                                <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="property-progress">
-                                    <h4>Progress</h4>
-                                    <div class="progress-bar display-flex">
-                                        <span class="bar"></span>
-                                        <span class="stage-1"></span>
-                                        <span class="stage-2"></span>
-                                        <span class="stage-3"></span>
-                                        <span class="better-btn"><h4>Better</h4></span>
-                                        <span class="stage-5"></span>
-                                    </div>
-                                </div>
-                                <div class="property-comment">
-                                    <h4>Comment</h4>
-                                    <div class="comment-box">
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                                    </div>
-                                </div>
-                                <div class="feed-section">
-                                    <div class="feed-title flex-center">
-                                        <div class="stepnum-con">
-                                        <p>Step #1</p>
-                                        <a href="#location-page">
-                                        <div class="location-con display-flex">
-                                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                                        </div>   
-                                        </a> 
-                                        </div>
-                                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                                    </div>
-                                    <div class="feed-img"><img src="images/workout.jpg" alt=""></a></div>
-                                    <div class="property-section">
-                                        <div class="property-time">
-                                            <h4>Time</h4>
-                                            <div class="time-num-con display-flex flex-evenly">
-                                                <div class="start-time">
-                                                    <h5>Start time</h5>
-                                                    <div class="display-flex">
-                                                        <span class="time-num">2:00</span>
-                                                        <span class="ampm">PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="end-time">
-                                                    <h5>End time</h5>
-                                                    <div class="display-flex">
-                                                        <span class="time-num">4:20</span>
-                                                        <span class="ampm">PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="total">
-                                                    <h5>Total</h5>
-                                                    <div class="display-flex">
-                                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="property-progress">
-                                            <h4>Progress</h4>
-                                            <div class="progress-bar display-flex">
-                                                <span class="bar"></span>
-                                                <span class="stage-1"></span>
-                                                <span class="stage-2"></span>
-                                                <span class="stage-3"></span>
-                                                <span class="better-btn"><h4>Better</h4></span>
-                                                <span class="stage-5"></span>
-                                            </div>
-                                        </div>
-                                        <div class="property-comment">
-                                            <h4>Comment</h4>
-                                            <div class="comment-box">
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                                            </div>
-                                        </div>
-    </section>
-
-    <section data-role="page" id="step3-page">
-        <header data-role="header">
-            <h1>Lettering Design</h1>
-            <ul>
-                <li><a href="#" data-rel="back"><img class="icon-back"src="images/icon-back.png" alt=""></a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#addstep-page"><img class="icon-add" src="images/icon-add.png" alt=""></a></li>
-            </ul>
-        </header>
-        <div class="step-info-con display-flex">              
-        <div class="flex-evenly step-inform-section">
-            <div class="steps-con display-flex">
-            <h2>3</h2>
-            <p>Steps</p>
-            </div>  
-            <div class="time-con display-flex">
-            <h2>6</h2>
-            <p>Hours</p>
-            </div>      
-        </div>
-        </div>
-        <div data-role="main" class="mysteps">
-                <div class="feed-section">
-                    <div class="feed-title flex-center">
-                        <div class="stepnum-con">
-                        <p>Step #3</p>
-                        <a href="#location-page">
-                        <div class="location-con display-flex">
-                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                        </div>   
-                        </a> 
-                        </div>
-                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                    </div>
-                    <div class="feed-img"><img src="images/lettering.jpg" alt=""></a></div>
-                    <div class="property-section">
-                        <div class="property-time">
-                            <h4>Time</h4>
-                            <div class="time-num-con display-flex flex-evenly">
-                                <div class="start-time">
-                                    <h5>Start time</h5>
-                                    <div class="display-flex">
-                                        <span class="time-num">2:00</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="end-time">
-                                    <h5>End time</h5>
-                                    <div class="display-flex">
-                                        <span class="time-num">4:20</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="total">
-                                    <h5>Total</h5>
-                                    <div class="display-flex">
-                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="property-progress">
-                            <h4>Progress</h4>
-                            <div class="progress-bar display-flex">
-                                <span class="bar"></span>
-                                <span class="stage-1"></span>
-                                <span class="stage-2"></span>
-                                <span class="stage-3"></span>
-                                <span class="better-btn"><h4>Better</h4></span>
-                                <span class="stage-5"></span>
-                            </div>
-                        </div>
-                        <div class="property-comment">
-                            <h4>Comment</h4>
-                            <div class="comment-box">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                            </div>
-                        </div>
-
-                        <div class="feed-section">
-                            <div class="feed-title flex-center">
-                                <div class="stepnum-con">
-                                <p>Step #2</p>
-                                <a href="#location-page">
-                                <div class="location-con display-flex">
-                                <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                                </div>
-                                </a>    
-                                </div>
-                                <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                            </div>
-                            <div class="feed-img"><img src="images/lettering.jpg" alt=""></a></div>
-                            <div class="property-section">
-                                <div class="property-time">
-                                    <h4>Time</h4>
-                                    <div class="time-num-con display-flex flex-evenly">
-                                        <div class="start-time">
-                                            <h5>Start time</h5>
-                                            <div class="display-flex">
-                                                <span class="time-num">2:00</span>
-                                                <span class="ampm">PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="end-time">
-                                            <h5>End time</h5>
-                                            <div class="display-flex">
-                                                <span class="time-num">4:20</span>
-                                                <span class="ampm">PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="total">
-                                            <h5>Total</h5>
-                                            <div class="display-flex">
-                                                <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="property-progress">
-                                    <h4>Progress</h4>
-                                    <div class="progress-bar display-flex">
-                                        <span class="bar"></span>
-                                        <span class="stage-1"></span>
-                                        <span class="stage-2"></span>
-                                        <span class="stage-3"></span>
-                                        <span class="better-btn"><h4>Better</h4></span>
-                                        <span class="stage-5"></span>
-                                    </div>
-                                </div>
-                                <div class="property-comment">
-                                    <h4>Comment</h4>
-                                    <div class="comment-box">
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                                    </div>
-                                </div>
-                                <div class="feed-section">
-                                    <div class="feed-title flex-center">
-                                        <div class="stepnum-con">
-                                        <p>Step #1</p>
-                                        <a href="#location-page">
-                                        <div class="location-con display-flex">
-                                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                                        </div>    
-                                        </a>
-                                        </div>
-                                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                                    </div>
-                                    <div class="feed-img"><img src="images/lettering.jpg" alt=""></a></div>
-                                    <div class="property-section">
-                                        <div class="property-time">
-                                            <h4>Time</h4>
-                                            <div class="time-num-con display-flex flex-evenly">
-                                                <div class="start-time">
-                                                    <h5>Start time</h5>
-                                                    <div class="display-flex">
-                                                        <span class="time-num">2:00</span>
-                                                        <span class="ampm">PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="end-time">
-                                                    <h5>End time</h5>
-                                                    <div class="display-flex">
-                                                        <span class="time-num">4:20</span>
-                                                        <span class="ampm">PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="total">
-                                                    <h5>Total</h5>
-                                                    <div class="display-flex">
-                                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="property-progress">
-                                            <h4>Progress</h4>
-                                            <div class="progress-bar display-flex">
-                                                <span class="bar"></span>
-                                                <span class="stage-1"></span>
-                                                <span class="stage-2"></span>
-                                                <span class="stage-3"></span>
-                                                <span class="better-btn"><h4>Better</h4></span>
-                                                <span class="stage-5"></span>
-                                            </div>
-                                        </div>
-                                        <div class="property-comment">
-                                            <h4>Comment</h4>
-                                            <div class="comment-box">
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                                            </div>
-                                        </div>
-    </section>
-
-    <section data-role="page" id="step4-page">
-        <header data-role="header">
-            <h1>Lettering Design</h1>
-            <ul>
-                <li><a href="#" data-rel="back"><img class="icon-back"src="images/icon-back.png" alt=""></a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#addstep-page"><img class="icon-add" src="images/icon-add.png" alt=""></a></li>
-            </ul>
-        </header>
-        <div class="step-info-con display-flex">              
-        <div class="flex-evenly step-inform-section">
-            <div class="steps-con display-flex">
-            <h2>3</h2>
-            <p>Steps</p>
-            </div>  
-            <div class="time-con display-flex">
-            <h2>6</h2>
-            <p>Hours</p>
-            </div>      
-        </div>
-        </div>
-        <div data-role="main" class="mysteps">
-                <div class="feed-section">
-                    <div class="feed-title flex-center">
-                        <div class="stepnum-con">
-                        <p>Step #3</p>
-                        <a href="#location-page">
-                        <div class="location-con display-flex">
-                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                        </div>   
-                        </a> 
-                        </div>
-                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                    </div>
-                    <div class="feed-img"><img src="images/reading.jpg" alt=""></a></div>
-                    <div class="property-section">
-                        <div class="property-time">
-                            <h4>Time</h4>
-                            <div class="time-num-con display-flex flex-evenly">
-                                <div class="start-time">
-                                    <h5>Start time</h5>
-                                    <div class="display-flex">
-                                        <span class="time-num">2:00</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="end-time">
-                                    <h5>End time</h5>
-                                    <div class="display-flex">
-                                        <span class="time-num">4:20</span>
-                                        <span class="ampm">PM</span>
-                                    </div>
-                                </div>
-                                <div class="total">
-                                    <h5>Total</h5>
-                                    <div class="display-flex">
-                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="property-progress">
-                            <h4>Progress</h4>
-                            <div class="progress-bar display-flex">
-                                <span class="bar"></span>
-                                <span class="stage-1"></span>
-                                <span class="stage-2"></span>
-                                <span class="stage-3"></span>
-                                <span class="better-btn"><h4>Better</h4></span>
-                                <span class="stage-5"></span>
-                            </div>
-                        </div>
-                        <div class="property-comment">
-                            <h4>Comment</h4>
-                            <div class="comment-box">
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                            </div>
-                        </div>
-
-                        <div class="feed-section">
-                            <div class="feed-title flex-center">
-                                <div class="stepnum-con">
-                                <p>Step #2</p>
-                                <a href="#location-page">
-                                <div class="location-con display-flex">
-                                <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                                </div>    
-                                </a>
-                                </div>
-                                <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                            </div>
-                            <div class="feed-img"><img src="images/reading.jpg" alt=""></a></div>
-                            <div class="property-section">
-                                <div class="property-time">
-                                    <h4>Time</h4>
-                                    <div class="time-num-con display-flex flex-evenly">
-                                        <div class="start-time">
-                                            <h5>Start time</h5>
-                                            <div class="display-flex">
-                                                <span class="time-num">2:00</span>
-                                                <span class="ampm">PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="end-time">
-                                            <h5>End time</h5>
-                                            <div class="display-flex">
-                                                <span class="time-num">4:20</span>
-                                                <span class="ampm">PM</span>
-                                            </div>
-                                        </div>
-                                        <div class="total">
-                                            <h5>Total</h5>
-                                            <div class="display-flex">
-                                                <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="property-progress">
-                                    <h4>Progress</h4>
-                                    <div class="progress-bar display-flex">
-                                        <span class="bar"></span>
-                                        <span class="stage-1"></span>
-                                        <span class="stage-2"></span>
-                                        <span class="stage-3"></span>
-                                        <span class="better-btn"><h4>Better</h4></span>
-                                        <span class="stage-5"></span>
-                                    </div>
-                                </div>
-                                <div class="property-comment">
-                                    <h4>Comment</h4>
-                                    <div class="comment-box">
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                                    </div>
-                                </div>
-                                <div class="feed-section">
-                                    <div class="feed-title flex-center">
-                                        <div class="stepnum-con">
-                                        <p>Step #1</p>
-                                        <a href="#location-page">
-                                        <div class="location-con display-flex">
-                                        <img src="images/icon-location.png" alt="" class="icon-location"><h6>Dale city, San Francisco</h6>
-                                        </div>  
-                                        </a>  
-                                        </div>
-                                        <li><a href="#"><img class="icon-edit" src="images/icon-edit.png" data-activate="#editordelete-popup" data-role="none" alt=""></a></li>
-                                    </div>
-                                    <div class="feed-img"><img src="images/reading.jpg" alt=""></a></div>
-                                    <div class="property-section">
-                                        <div class="property-time">
-                                            <h4>Time</h4>
-                                            <div class="time-num-con display-flex flex-evenly">
-                                                <div class="start-time">
-                                                    <h5>Start time</h5>
-                                                    <div class="display-flex">
-                                                        <span class="time-num">2:00</span>
-                                                        <span class="ampm">PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="end-time">
-                                                    <h5>End time</h5>
-                                                    <div class="display-flex">
-                                                        <span class="time-num">4:20</span>
-                                                        <span class="ampm">PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="total">
-                                                    <h5>Total</h5>
-                                                    <div class="display-flex">
-                                                        <span class="total-num">2</span><span class="total-time">h</span><span class=total-num>20</span><span class="total-time">m</span>                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="property-progress">
-                                            <h4>Progress</h4>
-                                            <div class="progress-bar display-flex">
-                                                <span class="bar"></span>
-                                                <span class="stage-1"></span>
-                                                <span class="stage-2"></span>
-                                                <span class="stage-3"></span>
-                                                <span class="better-btn"><h4>Better</h4></span>
-                                                <span class="stage-5"></span>
-                                            </div>
-                                        </div>
-                                        <div class="property-comment">
-                                            <h4>Comment</h4>
-                                            <div class="comment-box">
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos nihil sunt temporibus dolorum eligendi quibusdam quidem aspernatur consequatur, ab facilis expedita nobis numquam saepe assumenda molestias eaque placeat odio? Voluptatem!</p>
-                                            </div>
-                                        </div>
-    </section>
-
-    <div class="modal" id="editordelete-popup">
-        <div class="modal-back modal-editordelete-back" data-deactivate="#editordelete-popup">
-            <div class="modal-editordelete">
-                <div class="editordelete-title">Step #3</div>
-                <div class="modal-body editordelete-con display-flex" data-ajax="false">
-                    <a class="edit-delete" href="#" data-activate="#modal-confirm-delete" data-role="none">
-                        <div class="delete-icon"><img src="images/icon-edit-delete.png" alt=""></div>
-                        <div class="delete-text">Delete</div>
-                    </a>
-                    <a class="edit-edit" href="#editstep-page" data-role="none">
-                        <div class="edit-icon"><img src="images/icon-edit-edit.png" alt=""></div>
-                        <div class="edit-text">Edit</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="modal-confirm-delete">
-        <div class="modal-back delete-confirm-text" data-deactivate="#modal-confirm-delete">
-        <div class="delete-confirm-con">
-            <div class="text-box">Are you sure you want to delete?</div>
-            <div class="respond-con display-flex">
-                <div class="cancel-delete" data-deactivate="#editordelete-popup">Cancel</div>
-                <div class="delete-delete" data-deactivate="#editordelete-popup">Delete</div>
-            </div>
-        </div>
-        </div>
-    </div>
-
-    
-
-  
-    <script type="text/template" id="footer-template">
-        <ul class="nav-icon-set">
-           <li><a href="#home-page" data-activateone=".nav-icon-set li:nth-child(1)">
-              <span class="icon-menu-home"></span>
-           </a></li>
-           <li><a href="#step-page" data-activateone=".nav-icon-set li:nth-child(2)">
-              <span class="icon-menu-steps"></span>
-           </a></li>
-           <!-- <li><a href="#analysis-page" data-activateone=".nav-icon-set li:nth-child(3)">
-              <span class="icon-menu-analysis"></span>
-           </a></li> -->
-        </ul>
-     </script>
+   <script type="text/template" id="footer-template">
+      <ul class="nav-icon-set">
+         <li><a href="#recent-page" data-activateone=".nav-icon-set li:nth-child(1)">
+            <span class="nav-icon"><img class="icon" src="img/icons/home.png"></span>
+            <span class="nav-icon-label"></span>
+         </a></li>
+         <li><a href="#list-page" data-activateone=".nav-icon-set li:nth-child(2)">
+            <span class="nav-icon"><img class="icon" src="img/icons/step.png"></span>
+            <span class="nav-icon-label"></span>
+         </a></li>
+         <!-- <li><a href="#user-profile-page" data-activateone=".nav-icon-set li:nth-child(3)">
+            <span class="nav-icon"><img class="icon" src="img/icons/profile.svg"></span>
+            <span class="nav-icon-label">Profile</span>
+         </a></li> -->
+      </ul>
+   </script>
+   
 </body>
 </html>

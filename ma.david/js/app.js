@@ -1,3 +1,4 @@
+
 $(() => {
    checkUserId();
 
@@ -9,13 +10,24 @@ $(() => {
 
       // PAGE ROUTING
       switch(ui.toPage[0].id) {
-         case "home-page": HomePage(); break;
-         case "step-page": StepPage(); break;
-         case "profile-page": UserProfilePage(); break;
-         case "location-page": MapPage(); break;
+         case "recent-page": RecentPage(); break;
+         case "list-page": ListPage(); break;
+         
+         case "user-profile-page": UserProfilePage(); break;
+         case "user-edit-page": UserEditPage(); break;
+         case "user-edit-photo-page": UserEditPhotoPage(); break;
+         
+         case "animal-profile-page": AnimalProfilePage(); break;
+         case "animal-edit-page": AnimalEditPage(); break;
+         case "animal-add-page": AnimalAddPage(); break;
+         case "animal-edit-photo-page": AnimalEditPhotoPage(); break;
 
+         case "choose-animal-page": ChooseAnimalPage(); break;
+         case "choose-location-page": ChooseLocationPage(); break;
       }
    })
+
+
 
 
 
@@ -24,6 +36,83 @@ $(() => {
       e.preventDefault();
       checkLoginForm();
    })
+   .on("submit", "#signup-form", function(e) {
+      e.preventDefault();
+      submitUserSignup();
+   })
+
+   .on("submit", "#list-search-form", function(e) {
+      e.preventDefault();
+      let s = $(this).find("input").val();
+      checkSearchForm(s);
+   })
+
+
+
+
+
+   // FORM SUBMISSION CLICKS
+   .on("click", ".js-submit-animal-add", function() {
+      submitAnimalAdd();
+   })
+   .on("click", ".js-submit-animal-edit", function() {
+      submitAnimalEdit();
+   })
+   .on("click", ".js-submit-user-edit", function() {
+      submitUserEdit();
+   })
+   .on("click", ".js-submit-location-add", function() {
+      submitLocationAdd();
+   })
+
+
+
+
+
+   .on("change", "#choose-animal-input select", function(e) {
+      $("#location-animal").val(this.value);
+   })
+
+
+   .on("change",".imagepicker input", function(e){
+      checkUpload(this.files[0])
+      .then(d=>{
+         console.log(d)
+         let filename = `uploads/${d.result}`;
+         $(this).parent().prev().val(filename)
+         $(this).parent().css({
+            "background-image":`url(${filename})`
+         }).addClass("picked");
+      })
+   })
+   .on("click", ".js-submit-user-upload", function(e) {
+      let image = $("#user-edit-photo-image").val();
+      query({
+         type: "update_user_image",
+         params: [image, sessionStorage.userId]
+      }).then(d=>{
+         if(d.error) throw(d.error);
+         history.go(-1);
+      })
+   })
+   .on("click", ".js-submit-animal-upload", function(e) {
+      let image = $("#animal-edit-photo-image").val();
+      query({
+         type: "update_animal_image",
+         params: [image, sessionStorage.animalId]
+      }).then(d=>{
+         if(d.error) throw(d.error);
+         history.go(-1);
+      })
+   })
+
+
+   .on("click", "[data-filter]", function(e) {
+      let {filter,value} = $(this).data();
+      if(value=="") ListPage();
+      else checkFilter(filter,value);
+   })
+
 
 
    // CLICKS
@@ -32,15 +121,38 @@ $(() => {
       checkUserId();
    })
 
-   .on("click", ".js-step-jump", function(e) {
+
+   .on("click", ".js-animal-jump", function(e) {
       try {
          e.preventDefault();
-         sessionStorage.stepId = $(this).data('id');
-         $.mobile.navigate("#step-profile-page");
+         sessionStorage.animalId = $(this).data('id');
+         $.mobile.navigate("#animal-profile-page");
       } catch(e) {
          throw("No id detected");
       }
    })
+   .on("click",".js-animal-delete", function(e) {
+      submitDeleteAnimal();
+   })
+   .on("click",".js-location-choose-animal", function(e) {
+      $("#location-animal").val(sessionStorage.animalId)
+      $("#location-start").val(-2);
+   })
+
+
+
+
+
+   .on("click", ".animal-profile-nav>div", function(e) {
+      let id = $(this).index();
+      $(this).parent()
+         .next().children().eq(id)
+         .addClass("active")
+         .siblings().removeClass("active")
+      $(this).addClass("active")
+         .siblings().removeClass("active")
+   })
+
 
    // ACTIVATE TOOLS
    .on("click", "[data-activate]", function() {
@@ -68,44 +180,10 @@ $(() => {
       $(this).html($(target).html())
    });
 
-   [,"#home-page","#step-page","#analysis-page"].forEach((p,i)=>{
+   [,"#recent-page","#list-page","#user-profile-page"].forEach((p,i)=>{
       if(window.location.hash === p) {
-         console.log($(".nav-icon-set li"))
          $(`.nav-icon-set li:nth-child(${i})`).addClass("active");
       }
    });
 
 });
-
-//  Signup - Birthday
-
- $(document).ready(function(){            
-   var now = new Date();
-   var year = now.getFullYear();
-   var mon = (now.getMonth() + 1) > 9 ? ''+(now.getMonth() + 1) : '0'+(now.getMonth() + 1); 
-   var day = (now.getDate()) > 9 ? ''+(now.getDate()) : '0'+(now.getDate());           
-   //Year
-   for(var i = 1900 ; i <= year ; i++) {
-       $('#year').append('<option value="' + i + '">' + i + '</option>');    
-   }
-
-   //Month           
-   for(var i=1; i <= 12; i++) {
-       var mm = i > 9 ? i : "0"+i ;            
-       $('#month').append('<option value="' + mm + '">' + mm + '</option>');    
-   }
-   
-   //Day
-   for(var i=1; i <= 31; i++) {
-       var dd = i > 9 ? i : "0"+i ;            
-       $('#day').append('<option value="' + dd + '">' + dd+ '</option>');    
-   }
-   $("#year  > option[value="+year+"]").attr("selected", "true");        
-   $("#month  > option[value="+mon+"]").attr("selected", "true");    
-   $("#day  > option[value="+day+"]").attr("selected", "true");       
- 
-})
-
-//Birthday dropdown Code Reference: https://jh91.tistory.com
-
-

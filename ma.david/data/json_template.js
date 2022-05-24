@@ -1,6 +1,9 @@
 // https://www.json-generator.com/
 // https://konbert.com/convert/json/to/mysql
 
+
+
+
 // USER TEMPLATE
 [
   '{{repeat(10)}}',
@@ -23,22 +26,28 @@
 ]
 
 
-// STPE TEMPLATE
-
+// ANIMAL TEMPLATE
 [
   '{{repeat(50)}}',
   {
     id: '{{index(1)}}',
     user_id: '{{integer(1,10)}}',
     
-      
-    steps: function (tags) {
-      var steps = ['Piano Practice', 'Lettering Design', 'Reading','Workout','Photography','Running'];
-      return steps[tags.integer(0, steps.length - 1)];
+     name: function (tags) {
+      var name = ['Piano Practice', 'Lettering Design', 'Reading','Workout','Photography','Running'];
+      return name[tags.integer(0, name.length - 1)];
     },
-    progress: function (tags) {
-      var progress = ['Poor','Average','Good','Better','Exellent'];
-      return progress[tags.integer(0, progress.length - 1)];
+    
+    type: '{{random("favorite","goal","hobby")}}',
+    breed: function(tags) {
+      var breeds = {
+        favorite:["good","better","best"],
+        goal:["good","better","best"],
+        hobby:["good","better","best"]
+      };
+      var chosen_type = breeds[this.type];
+      var chosen_index = tags.integer(0,chosen_type.length-1);
+      return chosen_type[chosen_index];
     },
     
     description: '{{lorem(3,"sentences")}}',
@@ -47,10 +56,10 @@
       return 'https://via.placeholder.com/400/' +
         tags.integer(700,999) + '/fff/?text=' + this.name;
     },
-    icon: 'https://via.placeholder.com/400/?text=ICON',
     date_create: '{{date(new Date(2022, 0, 1), new Date(), "YYYY-MM-dd hh:mm:ss")}}'
   }
 ]
+
 
 
 // LOCATION TEMPLATE
