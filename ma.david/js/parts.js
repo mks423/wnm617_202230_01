@@ -33,6 +33,8 @@ const makeAnimalProfileDescription = o => `
 <h2>${o.name}</h2>
 <div>${o.type}</div>
 <div>${o.breed}</div>
+<div>${o.description}</div>
+
 `;
 
 
@@ -41,11 +43,11 @@ const makeAnimalProfileDescription = o => `
 
 const makeAnimalPopupBody = o => `
 <div class="display-flex js-animal-jump noclick-children" data-id="${o.id}">
-   <div class="animal-list-image"><img src="${o.img}" alt=""></div>
+   <div class="animal-list-image list-image-thumbnail"><img src="${o.img}" alt=""></div>
    <div>
-      <h2>${o.name}</h2>
-      <div>${o.type}</div>
-      <div>${o.breed}</div>
+      <h2 class="modal-popup-title">${o.name}</h2>
+      <div class="modal-popup-text">${o.type}</div>
+      <div class="modal-popup-text">${o.breed}</div>
    </div>
 </div>
 `;
@@ -94,7 +96,7 @@ ${FormControlInput({
    name:"name",
    displayname:"Name",
    type:"text",
-   placeholder:"Type a Name",
+   placeholder:"Name",
    value:animal.name,
 })}
 ${FormControlInput({
@@ -102,22 +104,22 @@ ${FormControlInput({
    name:"type",
    displayname:"Type",
    type:"text",
-   placeholder:"Type a Type",
+   placeholder:"Type",
    value:animal.type,
 })}
 ${FormControlInput({
    namespace,
    name:"breed",
-   displayname:"Breed",
+   displayname:"Progress",
    type:"text",
-   placeholder:"Type a Breed",
+   placeholder:"Progress",
    value:animal.breed,
 })}
 ${FormControlTextarea({
    namespace,
    name:"description",
    displayname:"Description",
-   placeholder:"Type a Description",
+   placeholder:"Description",
    value:animal.description,
 })}
 `;

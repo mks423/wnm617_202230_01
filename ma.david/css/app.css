@@ -278,6 +278,7 @@ a:hover {
   flex-direction: column;
   transition: all 0.3s;
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
+
 }
 
 .modal-drawer.left,
@@ -773,7 +774,6 @@ li {
 }
 .ui-footer {
   height: 4.5rem;
-  border-top: 1px solid #444;
   padding: 1em;
 }
 .ui-footer ul {
@@ -1881,8 +1881,31 @@ li {
 .add-main{
   position:absolute;
   top:80%;
-  right:50px;
+  
 }
+.center{
+  left:45%;
+}
+.animal-profile-description{
+  padding:2em;
+  color:#888;
+}
+.animal-profile-description h2{
+  font-size:1.2em;
+  color:white;
+}
+.list-image-thumbnail{
+  padding:2em;
+  margin-left:2em
+}
+.modal-popup-title{
+  padding:1em 1em;
+}
+.modal-popup-text{
+  padding:0.2em 1em;
+  color:#888;
+}
+
 .noclick-children * { pointer-events:none; }
 
 /* Layout Classes */
